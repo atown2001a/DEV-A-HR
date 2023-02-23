@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+	<meta name="description" content="The most X-treme HR cloud - Employees">
+	<meta name="author" content="Ahmed Almeleh">
+	<meta name="generator" content="Oracle Linux, GNU Namo">        
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+        <link rel="stylesheet" href="Stylesheet.css">
+	<title>Employees</title>
+    </head>
+    <body>
+        <h1 class="heALL">DEV-Xtreme HR</h1>
+        <ul>
+        <li><a href="/DEV-A-HR">Dashboard</a></li>
+        <li><a href="Organisation.html">Organisation</a></li>
+        <li><a class="active" href="Employees.html">Employees</a></li>
+        <li><a href="Timesheet.html">Timesheet</a></li>
+        <li><a href="Directory.html">Directory</a></li>
+        <li><a href="Calendar.html">Calendar</a></li>
+        <li><a href="Files.html">Files</a></li>
+        <li><a href="Reports.html">Reports</a></li>
+        <div class="conaggainer" onclick="myFunctiosn()">
+    	  <h1><i class="bi bi-list"></i></h1>              
+          <div class="myaDIV" id="myaDIV"><li><a href="Payroll.html">Payroll</a></li></div>
+          <div class="mybDIV" id="mybDIV"><li><a href="Recruitment.html">Recruitment</a></li></div>
+          <div class="mycDIV" id="mycDIV"><li><a href="Performance.html">Performance</a></li></div>
+        </div>  
+        </ul>
+
+        <svg class="MyRECT" id="mybackDIV" width="1745" height="185"   style="opacity:1;">
+        <rect width="1745" height="185"
+          style="fill:#FAE500;stroke-width:3;stroke:rgb(0,0,0)" />
+        Sorry, your browser does not support inline SVG.
+        </svg>
+
+
+
+<!-- HTML -->
+<br>
+<br>
+<br>
+
+<button onclick="HideOrShow()">Hide / Show</button>
+<div id="hideshowDIV">
+<h3>Theme Settings</h3>
+
+<div id="themeSettings1">
+<button type="button" onclick="loadDoc()">Gold Background, Navy Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettings2">
+<button type="button" onclick="loadDoc2()">Gold Background, Black Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettings3">
+<button type="button" onclick="loadDoc3()">Aqua Background, Navy Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettings4">
+<button type="button" onclick="loadDoc4()">Aqua Background, Black Bar</button>
+</div>
+
+<br>
+
+<div id="reloadme">
+<button type="button" onclick="reloadme()">Reload</button>
+</div>
+
+
+
+
+
+<script>
+function HideOrShow() {
+  var x = document.getElementById("hideshowDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+<script>
+/* Java Script */
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("themeSettings1").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "theme.html");
+  xhttp.send();
+}
+
+function loadDoc2() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("themeSettings2").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "theme2.html");
+  xhttp.send();
+}
+
+function loadDoc3() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("themeSettings3").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "theme3.html");
+  xhttp.send();
+}
+
+function loadDoc4() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("themeSettings4").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "theme4.html");
+  xhttp.send();
+}
+
+function reloadme() {
+location.reload(false);
+}
+</script>
+        <script>
+            function myFunctiosn() {
+            var x = document.getElementById("myaDIV");
+             if (x.style.display === "none") {
+               x.style.display = "block";
+             } else {
+               x.style.display = "none"; 
+               }
+
+            var x = document.getElementById("mybDIV");
+             if (x.style.display === "none") {
+               x.style.display = "block";
+             } else {
+               x.style.display = "none"; 
+               }
+
+            var x = document.getElementById("mycDIV");
+             if (x.style.display === "none") {
+               x.style.display = "block";
+             } else {
+               x.style.display = "none"; 
+               }
+            
+            
+	    var x = document.getElementById("mybackDIV");
+             if (x.style.display === "none") {
+               x.style.display = "block";
+             } else {
+               x.style.display = "none";
+               }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+           ul {
+             list-style-type: none;
+             margin: 0;
+             padding: 0;
+             overflow: hidden;
+             background-color: navy;
+             color:white;
+           }
+
+           li {
+               float: left;
+               border-right:1px solid white;
+           }
+
+           li:last-child {
+               border-right: none;
+           }
+
+           li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+           }
+
+            li a:hover:not(.active) {
+                background-color: darkgreen;
+                color: white;
+           }
+	   /* li a:focus {
+                background-color: maroon;
+                color: lime;
+           } */
+	   li a:hover {
+                background-color: maroon;
+                color: yellow;
+           }
+	
+           .active {
+                background-color: maroon;
+                color: white;
+           }
+    	
+          .conaggainer {
+               position: absolute;
+               top: 58px;
+               left: 795px;
+               display: inline-block;
+               cursor: pointer
+	       color: white;
+           }
+           .myaDIV, .mybDIV, .mycDIV {
+            display: none;
+           background-color: black;	
+           }
+
+          .myaDIV {
+                position: absolute;
+                top: 52px;
+                left: 5px;
+           }
+   
+           .mybDIV {
+                position: absolute;
+                top: 105px;
+                left: 5px;
+           }  
+           .mycDIV {
+                position: absolute;
+                top: 160px;
+                left: 5px;
+           }
+
+	   .heALL { 
+		color: white;
+	   }  
+
+	   .MyRECT {
+	     display:none;		
+	   }
+
+	   h2 {
+	      color: white;
+	   }
+
+	   h3 {
+	      color: white;
+	   }
+.tab {
+  overflow: visible;
+  border: 1px solid #ccc;
+  background-color: navy;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: maroon;
+  color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-top: none;
+  height: 700px;
+}
+           body {
+               background-color: #1B1C1B;
+           }
