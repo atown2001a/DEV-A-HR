@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="Stylesheet.css">
 	<title>Recruitment</title>
         <style>
-            .mybDIV
+            .recruitmentNavBTN
             {
                 background-color: maroon;
             }
@@ -21,25 +21,25 @@
     <body>
        <h1 class="heALL">DEV-Xtreme HR</h1>
         <ul>
-        <li><a href="index.html">Dashboard</a></li>
-        <li><a href="Organisation.html">Organisation</a></li>
-        <li><a href="Employees.html">Employees</a></li>
-        <li><a href="Timesheet.html">Timesheet</a></li>
-        <li><a href="Directory.html">Directory</a></li>
-        <li><a href="Calendar.html">Calendar</a></li>
-        <li><a href="Files.html">Files</a></li>
-        <li><a href="Reports.html">Reports</a></li>
-        <div class="conaggainer" onclick="myFunctiosn()">
-          <h1><i class="bi bi-list"></i></h1>           
-          <div class="myaDIV" id="myaDIV"><li><a href="Payroll.html">Payroll</a></li></div>
-          <div class="mybDIV" id="mybDIV"><li><a href="Recruitment.html">Recruitment</a></li></div>
-          <div class="mycDIV" id="mycDIV"><li><a href="Performance.html">Performance</a></li></div>
-        </div>  
+          <li><a href="/DEV-A-HR">Dashboard</a></li>
+          <li><a href="Organisation.html">Organisation</a></li>
+          <!-- <li><a href="Employees.html">Employees</a></li> -->
+          <li><a href="Directory.html">Directory</a></li>
+          <li><a href="Timesheet.html">Timesheet</a></li>
+          <li><a href="Calendar.html">Calendar</a></li>
+          <li><a href="Files.html">Files</a></li>
+          <li><a href="Reports.html">Reports</a></li>
+                <div class="conaggainer" onclick="navBTNGroupftn()">
+                    <h1><i class="bi bi-list active"></i></h1>
+                        <div class="payrollNavBTN" id="myaDIV"><li><a href="Payroll.html">Payroll</a></li></div>
+                        <div class="recruitmentNavBTN" id="mybDIV"><li><a href="Recruitment.html">Recruitment</a></li></div>
+                        <div class="perfromanceNavBTN" id="mycDIV"><li><a href="Performance.html">Performance</a></li></div>
+                </div>
         </ul>
 
-        <svg class="MyRECT" id="mybackDIV" width="1745" height="185"   style="opacity:1;">
-        <rect width="1745" height="185"
-          style="fill:#FAE500;stroke-width:3;stroke:rgb(0,0,0)" />
+        <svg class="MyRECT" id="mybackDIV" width="100%" height="175" style="opacity:1;">
+        <rect width="100%" height="175"
+           />
         Sorry, your browser does not support inline SVG.
         </svg>
 <!-- HTML -->
@@ -133,7 +133,7 @@ location.reload(false);
 }
 </script>
             <script>
-            function myFunctiosn() {
+            function navBTNGroupftn() {
             var x = document.getElementById("myaDIV");
              if (x.style.display === "none") {
                x.style.display = "block";

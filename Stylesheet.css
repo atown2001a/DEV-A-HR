@@ -1,3 +1,4 @@
+
            ul {
              list-style-type: none;
              margin: 0;
@@ -41,37 +42,48 @@
                 background-color: maroon;
                 color: white;
            }
+
+           body {
+               background-color: #1B1C1B;
+           }
     	
-          .conaggainer {
+           .conaggainer {
                position: absolute;
                top: 58px;
-               left: 795px;
+               right: 0px;
                display: inline-block;
-               cursor: pointer
-	       color: white;
-           }
-           .myaDIV, .mybDIV, .mycDIV {
-            display: none;
-           background-color: black;	
+               cursor: pointer;
            }
 
-          .myaDIV {
+           i {
                 position: absolute;
-                top: 52px;
-                left: 5px;
-           }
-   
-           .mybDIV {
-                position: absolute;
-                top: 105px;
-                left: 5px;
-           }  
-           .mycDIV {
-                position: absolute;
-                top: 160px;
-                left: 5px;
+                top: 0em;
+                right: 35.8em;
+            }
+
+           .payrollNavBTN,  .recruitmentNavBTN,  .perfromanceNavBTN {
+                background-color: navy;
+                display: none;
            }
 
+
+           .payrollNavBTN {
+                position: absolute;
+                top: 3.5em;
+                right: 86.7em;
+           }
+
+           .recruitmentNavBTN {
+                position: absolute;
+                top: 7em;
+                right: 84.5em;
+
+           }
+           .perfromanceNavBTN {
+                position: absolute;
+                top:  10.5em;
+                right: 84.3em;
+           }
 	   .heALL { 
 		color: white;
 	   }  
@@ -126,6 +138,3 @@
   border-top: none;
   height: 700px;
 }
-           body {
-               background-color: #1B1C1B;
-           }
