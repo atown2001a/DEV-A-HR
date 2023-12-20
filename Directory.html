@@ -119,14 +119,8 @@
   <span onclick="ConfirmDel7()" class="closebtn" >&times;</span>
 </div>
 
-<div class="chip" id="profile7b">
- <a href="Profile7b.html"><img src="img_avatar.png" alt="Person" width="96" height="96">
-  John Doe</a>
-  <span onclick="ConfirmDel7b()" class="closebtn" >&times;</span>
-</div>
-
-<a href="Profile8.html"><div class="chip" id="profile8">
-  <img src="img_avatar.png" alt="Person" width="96" height="96">
+<div class="chip" id="profile8">
+ <a href="Profile8.html"><img src="img_avatar.png" alt="Person" width="96" height="96">
   John Doe</a>
   <span onclick="ConfirmDel8()" class="closebtn" >&times;</span>
 </div>
@@ -154,13 +148,13 @@
   John Doe</a>
   <span onclick="ConfirmDel12()" class="closebtn" >&times;</span>
 </div>
-	
+
 <a href="Profile14.html"><div class="chip" id="profile14">
   <img src="img_avatar.png" alt="Person" width="96" height="96">
   John Doe</a>
   <span onclick="ConfirmDel14()" class="closebtn" >&times;</span>
 </div>
-
+	
 <a href="Profile15.html"><div class="chip" id="profile15">
   <img src="img_avatar.png" alt="Person" width="96" height="96">
   John Doe</a>
@@ -185,7 +179,7 @@
   <span onclick="ConfirmDel18()" class="closebtn" >&times;</span>
 </div>
 
-<a href="Profile10.html"><div class="chip" id="profile19">
+<a href="Profile19.html"><div class="chip" id="profile19">
   <img src="img_avatar.png" alt="Person" width="96" height="96">
   John Doe</a>
   <span onclick="ConfirmDel19()" class="closebtn" >&times;</span>
@@ -195,6 +189,12 @@
   <img src="img_avatar.png" alt="Person" width="96" height="96">
   John Doe</a>
   <span onclick="ConfirmDel20()" class="closebtn" >&times;</span>
+</div>
+
+<a href="Profile21.html"><div class="chip" id="profile21">
+  <img src="img_avatar.png" alt="Person" width="96" height="96">
+  John Doe</a>
+  <span onclick="ConfirmDel21()" class="closebtn" >&times;</span>
 </div>
 <!-- HTML -->
 <br>
@@ -485,6 +485,20 @@ if (result20 == true)
 {
 alert("really")
 profile20.style.display='none'
+
+}
+
+else {
+alert("No one was deleted")
+console.log("no one was removed")
+}}
+
+function ConfirmDel21() {
+var result21 =  confirm("Are you sure you want to delete this employee?");
+if (result21 == true)
+{
+alert("really")
+profile21.style.display='none'
 
 }else {
 alert("No one was deleted")
