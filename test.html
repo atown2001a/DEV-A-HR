@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<body>
+
+<button type="button" onclick="loadTimesheetDoc()">Get Employee Timesheet</button>
+<br><br>
+<table id="week8"></table>
+
+<script>
+function loadTimesheetDoc() {
+  var xhttpA = new XMLHttpRequest();
+  xhttpA.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myTimesheetImp(this);
+    }
+  };
+  xhttpA.open("GET", "timesheet.xml", true);
+  xhttpA.send();
+}
+function myTimesheetImp(xml) {
+  var t;
+  var xmlDoc = xml.responseXML;
+  var table ="<tr><th>Firstname</th><th>Lastname</th><th>Week</th><th>Total Hours</th></tr>";
+  var xx = xmlDoc.getElementsByTagName("TIMESHEET");
+  for (t = 0; t <xx.length; t++) { 
+    table += "<tr><td>" +
+    xx[t].getElementsByTagName("FIRSTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    xx[t].getElementsByTagName("LASTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("WEEK")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    xx[t].getElementsByTagName("THOURS")[0].childNodes[0].nodeValue +
+    "</td><tr>";
+  }
+  document.getElementById("week8").innerHTML = table;
+}
+</script>
+
+</body>
+</html>
+
