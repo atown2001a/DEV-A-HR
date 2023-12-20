@@ -7,26 +7,31 @@
         <meta name="generator" content="Fedora Linux / CENTOS Stream, GNU Namo">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script> -->
+     	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script> -->
         <link rel="stylesheet" href="Stylesheet.css">
 	  <script src="html2canvas.min.js"></script>
 	<script src="Script.js"></script>
-	<title>Timesheet</title> 
-<style>
-p, h1,h2,h3,h4,h5,h6{
-color:white;
-}
-
-.hideOnPgLoad {
-display:none;
-}
-</style>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+	<title>Betimes</title> 
+	<style>
+	  .hideOnPgLoad {
+	    display:none;
+	  }
+	
+	  table,th,td {
+  	    border : 1px solid black;
+  	    border-collapse: collapse;
+	  }
+	  th,td {
+  	    padding: 5px;
+	  }
+	</style>
     </head>
     <body>
-<div id="main">
-    <div id="screenshot"> 
-<h1 class="pgHeader">DEV-Xtreme HR</h1>
+	<div id="main">
+    	<div id="screenshot"> 
+	<h1 class="pgHeader">DEV-Xtreme HR</h1>
         <ul>
           <li><a href="/DEV-A-HR">Dashboard</a></li>
           <li><a href="Organisation.html">Organisation</a></li>
@@ -143,18 +148,310 @@ display:none;
 	<td contenteditable="true"></td>
 	<td contenteditable="true"></td>
       </tr>
-    </tbody>
+   </tbody>
   </table>
  </div>
 </div> 
 <div id="Import" class="dbtabcontent hideOnPgLoad">
   <div class="container mt-3">
     <h2>Import Timesheet</h2>
-    <p>Import Employee' hours</p>             
- 
+    <p>Import Employee' hours</p>     
+<form action=""> 
+<!-- <select name="customers" onchange="showCustomer(this.value)">
+<option value="">Select a date:</option> 
+<option value="AF">08/12/2023</option>  
+<option value="NS ">09/12/2023</option>
+<option value="WZ">10/12/2023</option> 
+</select> -->
+<h2>Weekly</h2>
+<div class="Weekly">
+<button type="button" onclick="loadTimesheetDocW1()">04/12/2023</button>
+<button type="button" onclick="loadTimesheetDocW2()">11/12/2023</button>
+<button type="button" onclick="loadTimesheetDocW3()">18/12/2023</button>
+<button type="button" onclick="loadTimesheetDocW4()">25/12/2023</button>
+<button id="hide" onclick="hideTbl()">Hide Table</button>
+<table id="week1"></table> 
+<table id="week2"></table> 
+<table id="week3"></table> 
+<table id="week4"></table> 
+</div>
 
+<h2>Daily</h2>
+<div class="Daily">
+<button type="button" onclick="loadTimesheetDocD1()">17/12/2023</button>
+<button type="button" onclick="loadTimesheetDocD2()">18/12/2023</button>
+<button type="button" onclick="loadTimesheetDocD3()">19/12/2023</button>
+<button type="button" onclick="loadTimesheetDocD4()">20/12/2023</button>
+<div class="HideWeeklyTBL">
+<table id="day1"></table> 
+<table id="day2"></table> 
+<table id="day3"></table> 
+<table id="day4"></table> 
+</div>
+</div>
+</form> 
+
+<br> 
+<!-- 
+<div id="txtHint">Customer info will be listed here...</div>
+-->
   </div>
 </div> 
+<script>
+function loadTimesheetDocW1() {
+  var xhttpA = new XMLHttpRequest();
+  xhttpA.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myTimesheetImp(this);
+    }
+  };
+  xhttpA.open("GET", "timesheet.xml", true);
+  xhttpA.send();
+}
+function myTimesheetImp(xml) {
+  var t;
+  var xmlDoc = xml.responseXML;
+  var table ="<tr><th>Firstname</th><th>Lastname</th><th>Week</th><th>Total Hours</th></tr>";
+  var xx = xmlDoc.getElementsByTagName("PERSON");
+  for (t = 0; t <xx.length; t++) {
+    table += "<tr><td>" +
+    xx[t].getElementsByTagName("FIRSTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("LASTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("WEEK")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("THOURS")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("week1").innerHTML = table;
+}
+
+//Week 2
+
+function loadTimesheetDocW2() {
+  var xhttpA = new XMLHttpRequest();
+  xhttpA.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myTimesheetImp(this);
+    }
+  };
+  xhttpA.open("GET", "timesheetW2.xml", true);
+  xhttpA.send();
+}
+function myTimesheetImp2(xml) {
+  var t;
+  var xmlDoc = xml.responseXML;
+  var table ="<tr><th>Firstname</th><th>Lastname</th><th>Week</th><th>Total Hours</th></tr>";
+  var xx = xmlDoc.getElementsByTagName("PERSON");
+  for (t = 0; t <xx.length; t++) {
+    table += "<tr><td>" +
+    xx[t].getElementsByTagName("FIRSTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("LASTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("WEEK")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("THOURS")[0].childNodes[0].nodeValue +
+    "</td><tr>";
+  }
+  document.getElementById("week2").innerHTML = table;
+}	
+
+//Week 3
+
+function loadTimesheetDocW3() {
+  var xhttpA = new XMLHttpRequest();
+  xhttpA.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myTimesheetImp(this);
+    }
+  };
+  xhttpA.open("GET", "timesheetW3.xml", true);
+  xhttpA.send();
+}
+function myTimesheetImp3(xml) {
+  var t;
+  var xmlDoc = xml.responseXML;
+  var table ="<tr><th>Firstname</th><th>Lastname</th><th>Week</th><th>Total Hours</th></tr>";
+  var xx = xmlDoc.getElementsByTagName("PERSON");
+  for (t = 0; t <xx.length; t++) {
+    table += "<tr><td>" +
+    xx[t].getElementsByTagName("FIRSTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("LASTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("WEEK")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("THOURS")[0].childNodes[0].nodeValue +
+    "</td><tr>";
+  }
+  document.getElementById("week3").innerHTML = table;
+}	
+
+//Week 4
+
+function loadTimesheetDocW4() {
+  var xhttpA = new XMLHttpRequest();
+  xhttpA.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myTimesheetImp(this);
+    }
+  };
+  xhttpA.open("GET", "timesheetW4.xml", true);
+  xhttpA.send();
+}
+function myTimesheetImp4(xml) {
+  var t;
+  var xmlDoc = xml.responseXML;
+  var table ="<tr><th>Firstname</th><th>Lastname</th><th>Week</th><th>Total Hours</th></tr>";
+  var xx = xmlDoc.getElementsByTagName("PERSON");
+  for (t = 0; t <xx.length; t++) {
+    table += "<tr><td>" +
+    xx[t].getElementsByTagName("FIRSTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("LASTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("WEEK")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("THOURS")[0].childNodes[0].nodeValue +
+    "</td><tr>";
+  }
+  document.getElementById("week4").innerHTML = table;
+}
+
+//Daily
+
+function loadTimesheetDocD1() {
+  var xhttpA = new XMLHttpRequest();
+  xhttpA.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myTimesheetImpD(this);
+    }
+  };
+  xhttpA.open("GET", "timesheetD1.xml", true);
+  xhttpA.send();
+}
+function myTimesheetImpD(xml) {
+  var t;
+  var xmlDoc = xml.responseXML;
+  var table ="<tr><th>First name</th><th>Last name</th><th>Date</th><th>Start Time</th><th>End Time</th><th>Regular Hours</th><th>Overtime Hours</th><th>Total Hours</th></tr>";
+  var xx = xmlDoc.getElementsByTagName("PERSON");
+  for (t = 0; t <xx.length; t++) {
+    table += "<tr><td>" +
+    xx[t].getElementsByTagName("FIRSTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("LASTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("DATE")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("STIME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("ETIME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("RHOURS")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("OHOURS")[0].childNodes[0].nodeValue +
+    "</td><td>"+	
+    xx[t].getElementsByTagName("THOURS")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("day1").innerHTML = table;
+}
+
+//Day 2
+
+function loadTimesheetDocD2() {
+  var xhttpA = new XMLHttpRequest();
+  xhttpA.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myTimesheetImpD(this);
+    }
+  };
+  xhttpA.open("GET", "timesheetD2.xml", true);
+  xhttpA.send();
+}
+function myTimesheetImpD2(xml) {
+  var t;
+  var xmlDoc = xml.responseXML;
+  var table ="<tr><th>Firstname</th><th>Lastname</th><th>Week</th><th>Total Hours</th></tr>";
+  var xx = xmlDoc.getElementsByTagName("PERSON");
+  for (t = 0; t <xx.length; t++) {
+    table += "<tr><td>" +
+    xx[t].getElementsByTagName("FIRSTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("LASTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("WEEK")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("THOURS")[0].childNodes[0].nodeValue +
+    "</td><tr>";
+  }
+  document.getElementById("day2").innerHTML = table;
+}	
+
+//Week 3
+
+function loadTimesheetDocW3() {
+  var xhttpA = new XMLHttpRequest();
+  xhttpA.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myTimesheetImp(this);
+    }
+  };
+  xhttpA.open("GET", "timesheetW3.xml", true);
+  xhttpA.send();
+}
+function myTimesheetImp3(xml) {
+  var t;
+  var xmlDoc = xml.responseXML;
+  var table ="<tr><th>Firstname</th><th>Lastname</th><th>Week</th><th>Total Hours</th></tr>";
+  var xx = xmlDoc.getElementsByTagName("PERSON");
+  for (t = 0; t <xx.length; t++) {
+    table += "<tr><td>" +
+    xx[t].getElementsByTagName("FIRSTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("LASTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("WEEK")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("THOURS")[0].childNodes[0].nodeValue +
+    "</td><tr>";
+  }
+  document.getElementById("week3").innerHTML = table;
+}	
+
+//Week 4
+
+function loadTimesheetDocW4() {
+  var xhttpA = new XMLHttpRequest();
+  xhttpA.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myTimesheetImp(this);
+    }
+  };
+  xhttpA.open("GET", "timesheetW4.xml", true);
+  xhttpA.send();
+}
+function myTimesheetImp4(xml) {
+  var t;
+  var xmlDoc = xml.responseXML;
+  var table ="<tr><th>Firstname</th><th>Lastname</th><th>Week</th><th>Total Hours</th></tr>";
+  var xx = xmlDoc.getElementsByTagName("PERSON");
+  for (t = 0; t <xx.length; t++) {
+    table += "<tr><td>" +
+    xx[t].getElementsByTagName("FIRSTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("LASTNAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("WEEK")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    xx[t].getElementsByTagName("THOURS")[0].childNodes[0].nodeValue +
+    "</td><tr>";
+  }
+  document.getElementById("week4").innerHTML = table;
+}	
+</script>
 
 <div class="tab">
   <button class="dbtablinks" onclick="openDatabase(event, 'Daily')">Daily</button>
@@ -175,7 +472,6 @@ display:none;
     <a id="a-download" href="#" style="display:none;">Download screenshot</a>
 </div>
 
-
 <button onclick="HideOrShow()">Hide / Show</button>
 <div id="hideshowDIV">
 <h3>Theme Settings</h3>
@@ -183,15 +479,11 @@ display:none;
 <div id="themeSettings1">
 <button type="button" onclick="loadDoc()">Gold Background, Navy Bar</button>
 </div>
-
 <br>
-
 <div id="themeSettings2">
-<button type="button" onclick="loadDoc2()">Gold Background, Black Bar</button>
+<button type="button" onclick="loadDoc2()">Black Background, Navy Bar</button>
 </div>
-
 <br>
-
 <div id="themeSettings3">
 <button type="button" onclick="loadDoc3()">Aqua Background, Navy Bar</button>
 </div>
@@ -247,5 +539,30 @@ display:none;
         this.download = "canvas-image.png";
     }, false);
 	</script>
+
+<script>
+/* function showCustomer(str) {
+  var xhttp;    
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "timesheet08.12.2023.xml", true);
+  xhttp.send();
+} */
+</script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#HideWeeklyTBL").remove();
+  });
+});
+</script>
     </body>
 </html>

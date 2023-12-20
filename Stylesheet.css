@@ -3,8 +3,8 @@
              margin: 0;
              padding: 0;
              overflow: hidden;
-             background-color: navy;
-             color:white;
+             background-color: black;
+             color:blac;
            }
 
            li {
@@ -36,16 +36,15 @@
                 background-color: maroon;
                 color: yellow;
            }
+	   body {
+		background-color:gold;
+	   }
 	
            .active {
                 background-color: maroon;
                 color: white;
            }
 
-           body {
-               background-color: #1B1C1B;
-           }
-    	
            .conaggainer {
                position: absolute;
                top: 58px;
@@ -84,24 +83,24 @@
                 right: 84.3em;
            }
 	   .pgHeader { 
-		color: white;
+		color: black;
 	   }  
 
 	   .MyRECT {
 	     display:none;		
 	   }
 
-	   h2 {
-	      color: white;
+	   p, h1,h2,h3,h4,h5,h6 {
+	      color: black
 	   }
 
-	   h3 {
+           i {
 	      color: white;
 	   }
 .tab {
   overflow: visible;
   border: 1px solid #ccc;
-  background-color: navy;
+  background-color: black;
 }
 
 /* Style the buttons inside the tab */
