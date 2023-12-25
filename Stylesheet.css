@@ -53,12 +53,7 @@
                cursor: pointer;
            }
 
-           i {
-                position: absolute;
-                top: 0em;
-                right: 35.8em;
-            }
-
+           
            .payrollNavBTN,  .recruitmentNavBTN,  .performanceNavBTN {
                 background-color: navy;
                 display: none;
@@ -95,8 +90,15 @@
 	   }
 
            i {
-	      color: white;
+	      color: white
 	   }
+	   i {
+              position: absolute;
+              top: 0em;
+	      /* For Firefox - (recommended for DAHR) */
+              right: 89.3rem; 
+           }
+
 .tab {
   overflow: visible;
   border: 1px solid #ccc;
