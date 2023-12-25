@@ -1,4 +1,4 @@
-           ul {
+          ul {
              list-style-type: none;
              margin: 0;
              padding: 0;
@@ -53,12 +53,6 @@
                cursor: pointer;
            }
 
-           i {
-                position: absolute;
-                top: 0em;
-                right: 35.8em;
-            }
-
            .payrollNavBTN,  .recruitmentNavBTN,  .performanceNavBTN {
                 background-color: navy;
                 display: none;
@@ -97,6 +91,14 @@
            i {
 	      color: white;
 	   }
+
+           i {
+                position: absolute;
+                top: 0em;
+	        /* For Firefox (Recommended for DAHR) */
+                right: 89.4rem;
+            }
+
 .tab {
   overflow: visible;
   border: 1px solid #ccc;
