@@ -156,9 +156,9 @@
   <div class="container mt-3">
     <h2>Import Timesheet</h2>
     <p>Import Employee' hours</p>     
-<form action=""> 
+<form action="themeBTN"> 
 <!-- <select name="customers" onchange="showCustomer(this.value)">
-<option value="">Select a date:</option> 
+<option value="themeBTN">Select a date:</option> 
 <option value="AF">08/12/2023</option>  
 <option value="NS ">09/12/2023</option>
 <option value="WZ">10/12/2023</option> 
@@ -471,33 +471,33 @@ function myTimesheetImp4(xml) {
     <a id="a-make" href="#">Take screenshot</a>
     <a id="a-download" href="#" style="display:none;">Download screenshot</a>
 </div>
-
-<button onclick="HideOrShow()">Hide / Show</button>
+<br>
+<button onclick="HideOrShow()" class="themeBTN">Hide / Show</button>
 <div id="hideshowDIV">
 <h3>Theme Settings</h3>
 
 <div id="themeSettings1">
-<button type="button" onclick="loadDoc()">Gold Background, Navy Bar</button>
+<button type="button" onclick="loadDoc()" class="themeBTN">Gold Background, Navy Bar</button>
 </div>
 <br>
 <div id="themeSettings2">
-<button type="button" onclick="loadDoc2()">Black Background, Navy Bar</button>
+<button type="button" onclick="loadDoc2()" class="themeBTN">Black Background, Navy Bar</button>
 </div>
 <br>
 <div id="themeSettings3">
-<button type="button" onclick="loadDoc3()">Aqua Background, Navy Bar</button>
+<button type="button" onclick="loadDoc3()" class="themeBTN">Aqua Background, Navy Bar</button>
 </div>
 
 <br>
 
 <div id="themeSettings4">
-<button type="button" onclick="loadDoc4()">Aqua Background, Black Bar</button>
+<button type="button" onclick="loadDoc4()" class="themeBTN">Aqua Background, Black Bar</button>
 </div>
 
 <br>
 
 <div id="reloadme">
-<button type="button" onclick="reloadme()">Reload</button>
+<button type="button" onclick="reloadme()" class="themeBTN">Reload</button>
 </div>
 	<script>
 	function openDatabase(evt, dbName) {
@@ -508,7 +508,7 @@ function myTimesheetImp4(xml) {
   	}
   	dbtablinks = document.getElementsByClassName("dbtablinks");
   	for (i = 0; i < dbtablinks.length; i++) {
-    	dbtablinks[i].className = dbtablinks[i].className.replace(" active", "");
+    	dbtablinks[i].className = dbtablinks[i].className.replace(" active", "themeBTN");
   	}
 	  document.getElementById(dbName).style.display = "block";
 	  evt.currentTarget.className += " active";
@@ -543,8 +543,8 @@ function myTimesheetImp4(xml) {
 <script>
 /* function showCustomer(str) {
   var xhttp;    
-  if (str == "") {
-    document.getElementById("txtHint").innerHTML = "";
+  if (str == "themeBTN") {
+    document.getElementById("txtHint").innerHTML = "themeBTN";
     return;
   }
   xhttp = new XMLHttpRequest();
