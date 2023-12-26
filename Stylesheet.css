@@ -138,3 +138,10 @@
   border-top: none;
   height: 700px;
 }
+
+.themeBTN {
+background-color: black;
+color:white;
+padding: 5px;
+font-size: 17px;
+}
