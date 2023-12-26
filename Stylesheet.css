@@ -1,4 +1,4 @@
-           ul {
+          ul {
              list-style-type: none;
              margin: 0;
              padding: 0;
@@ -53,7 +53,6 @@
                cursor: pointer;
            }
 
-           
            .payrollNavBTN,  .recruitmentNavBTN,  .performanceNavBTN {
                 background-color: navy;
                 display: none;
@@ -90,14 +89,15 @@
 	   }
 
            i {
-	      color: white
+	      color: white;
 	   }
-	   i {
-              position: absolute;
-              top: 0em;
-	      /* For Firefox - (recommended for DAHR) */
-              right: 89.3rem; 
-           }
+
+           i {
+                position: absolute;
+                top: 0em;
+	        /* For Firefox (Recommended for DAHR) */
+                right: 89.4rem;
+            }
 
 .tab {
   overflow: visible;
@@ -137,4 +137,11 @@
   border: 1px solid #ccc;
   border-top: none;
   height: 700px;
+}
+
+.themeBTN {
+background-color: black;
+color:white;
+padding: 5px;
+font-size: 17px;
 }
