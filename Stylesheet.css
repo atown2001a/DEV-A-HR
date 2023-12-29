@@ -4,7 +4,6 @@
              padding: 0;
              overflow: hidden;
              background-color: black;
-             color:blac;
            }
 
            li {
@@ -28,10 +27,10 @@
                 background-color: darkgreen;
                 color: white;
            }
-	   /* li a:focus {
+	   /* li a:focus 
                 background-color: maroon;
                 color: lime;
-           } */
+            */
 	   li a:hover {
                 background-color: maroon;
                 color: yellow;
@@ -54,10 +53,14 @@
            }
 
            .payrollNavBTN,  .recruitmentNavBTN,  .performanceNavBTN {
-                background-color: navy;
+		background-color: black;
                 display: none;
            }
 
+	   .payrollNavBTN:hover,  .recruitmentNavBTN:hover,  .performanceNavBTN:hover {
+		background-color: gold;
+		color: white;
+          }
 
            .payrollNavBTN {
                 position: absolute;
@@ -80,8 +83,8 @@
 		color: black;
 	   }  
 
-	   .MyRECT {
-	     display:none;		
+	   .MyRECT {  
+		display: none;
 	   }
 
 	   p, h1,h2,h3,h4,h5,h6 {
@@ -92,13 +95,13 @@
 	      color: white;
 	   }
 
+
            i {
-                position: absolute;
+	        position: absolute;
                 top: 0em;
 	        /* For Firefox (Recommended for DAHR) */
-                right: 89.4rem;
+                right: 35.7em;
             }
-
 .tab {
   overflow: visible;
   border: 1px solid #ccc;
@@ -144,4 +147,10 @@ background-color: black;
 color:white;
 padding: 5px;
 font-size: 17px;
+}
+
+@media only screen and (min-width: 992px) {
+    .extraNavItems {
+ 	     display: none;
+    }
 }
