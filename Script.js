@@ -1,4 +1,3 @@
-
 function HideOrShow() {
   var x = document.getElementById("hideshowDIV");
   if (x.style.display === "none") {
@@ -96,6 +95,26 @@ function loadDocAB() {
   xhttp.open("GET", "themeAB.html");
   xhttp.send();
 } 
+
+// Beige Background, Navy Bar
+function loadDocBeN() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("themeSettingsBeN").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "themeBeN.html");
+  xhttp.send();
+}
+// Aqua Background Black Bar
+function loadDocBeB() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("themeSettingsBeB").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "themeBeB.html");
+  xhttp.send();
+}
+ 
 function reloadme() {
 location.reload(false);
 }
