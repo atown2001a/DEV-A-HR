@@ -1,3 +1,4 @@
+
 function HideOrShow() {
   var x = document.getElementById("hideshowDIV");
   if (x.style.display === "none") {
@@ -7,42 +8,94 @@ function HideOrShow() {
   }
 }
 
-function loadDoc() {
+// Grey Background Navy Bar
+function loadDocGrN() {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
-    document.getElementById("themeSettings1").innerHTML = this.responseText;
+    document.getElementById("themeSettingsGrN").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "theme.html");
+  xhttp.open("GET", "themeGrN.html");
   xhttp.send();
 }
 
-function loadDoc2() {
+// Black Background Aqua Bar
+function loadDocBA() {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
-    document.getElementById("themeSettings2").innerHTML = this.responseText;
+    document.getElementById("themeSettingsBA").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "theme2.html");
+  xhttp.open("GET", "themeBA.html");
   xhttp.send();
 }
 
-function loadDoc3() {
+//  Background Black Gold Bar
+function loadDocBG() {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
-    document.getElementById("themeSettings3").innerHTML = this.responseText;
+    document.getElementById("themeSettingsBG").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "theme3.html");
+  xhttp.open("GET", "themeBG.html");
   xhttp.send();
 }
 
-function loadDoc4() {
+
+// Navy Background Black Bar
+function loadDocNB() {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
-    document.getElementById("themeSettings4").innerHTML = this.responseText;
+    document.getElementById("themeSettingsNB").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "theme4.html");
+  xhttp.open("GET", "themeNB.html");
+  xhttp.send();
+}
+// Navy Background Gold Bar 
+function loadDocNG() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("themeSettingsNG").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "themeNG.html");
   xhttp.send();
 }
 
+
+// Gold Background Black Bar
+function loadDocGB() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("themeSettingsGB").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "themeGB.html");
+  xhttp.send();
+}
+// Gold Background Navy Bar
+function loadDocGN() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("themeSettingsGN").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "themeGN.html");
+  xhttp.send();
+}
+
+// Aqua Background, Navy Bar
+function loadDocAN() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("themeSettingsAN").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "themeAN.html");
+  xhttp.send();
+}
+// Aqua Background Black Bar
+function loadDocAB() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("themeSettingsAB").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "themeAB.html");
+  xhttp.send();
+} 
 function reloadme() {
 location.reload(false);
 }

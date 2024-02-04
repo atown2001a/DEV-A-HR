@@ -3,7 +3,7 @@
              margin: 0;
              padding: 0;
              overflow: hidden;
-             background-color: black;
+             background-color: navy;
            }
 
            li {
@@ -36,7 +36,7 @@
                 color: yellow;
            }
 	   body {
-		background-color:gold;
+		background-color:black;
 	   }
 	
            .active {
@@ -53,12 +53,12 @@
            }
 
            .payrollNavBTN,  .recruitmentNavBTN,  .performanceNavBTN {
-		background-color: black;
+		background-color: navy;
                 display: none;
            }
 
 	   .payrollNavBTN:hover,  .recruitmentNavBTN:hover,  .performanceNavBTN:hover {
-		background-color: gold;
+		background-color: navy;
 		color: white;
           }
 
@@ -80,7 +80,7 @@
                 right: 84.3em;
            }
 	   .pgHeader { 
-		color: black;
+		color: white;
 	   }  
 
 	   .MyRECT {  
@@ -88,7 +88,7 @@
 	   }
 
 	   p, h1,h2,h3,h4,h5,h6 {
-	      color: black
+	      color: white;
 	   }
 
            i {
@@ -105,7 +105,7 @@
 .tab {
   overflow: visible;
   border: 1px solid #ccc;
-  background-color: black;
+  background-color: navy;
 }
 
 /* Style the buttons inside the tab */
@@ -143,7 +143,7 @@
 }
 
 .themeBTN {
-background-color: black;
+background-color: navy;
 color:white;
 padding: 5px;
 font-size: 17px;
@@ -153,4 +153,7 @@ font-size: 17px;
     .extraNavItems {
  	     display: none;
     }
+}
+.myul {
+color: navy;
 }

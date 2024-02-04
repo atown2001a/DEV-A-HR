@@ -49,36 +49,35 @@
         <h1 class="pgHeader">DEV-Xtreme HR</h1>
 	<ul>
           <li><a class="active" href="/DEV-A-HR">Dashboard</a></li>
-	  <li><a href="Organisation.html">Organisation</a></li>	
+	  <li><a  class="myUL" href="Organisation.html">Organisation</a></li>	
 	  <!-- <li><a href="Employees.html">Employees</a></li> -->
-          <li><a href="Directory.html">Directory</a></li>
-	  <li><a href="Timesheet.html">Timesheet</a></li>
-          <li><a href="Calendar.html">Calendar</a></li>
-	  <li><a href="Files.html">Files</a></li>
-	  <li><a href="Reports.html">Reports</a></li>	   
+          <li><a class="myUL" href="Directory.html">Directory</a></li>
+	  <li><a class="myUL" href="Timesheet.html">Timesheet</a></li>
+          <li><a class="myUL" href="Calendar.html">Calendar</a></li>
+	  <li><a class="myUL" href="Files.html">Files</a></li>
+	  <li><a class="myUL"  href="Reports.html">Reports</a></li>	   
  	  	<div class="conaggainer" onclick="navBTNGroupftn()">	       
 	       	    <h1><i class="bi bi-list"></i></h1>
-	       		<div class="payrollNavBTN" id="payrollNavBTNjs"><li><a href="Payroll.html">Payroll</a></li></div>
-                	<div class="recruitmentNavBTN" id="recruitmentNavBTNjs""><li><a href="Recruitment.html">Recruitment</a></li></div>
- 	       		<div class="performanceNavBTN" id="performanceNavBTNjs"><li><a href="Performance.html">Performance</a></li></div>
+	       		<div class="payrollNavBTN myUL" id="payrollNavBTNjs"><li><a href="Payroll.html">Payroll</a></li></div>
+                	<div class="recruitmentNavBTN myUL" id="recruitmentNavBTNjs""><li><a href="Recruitment.html">Recruitment</a></li></div>
+ 	       		<div class="performanceNavBTN myUL" id="performanceNavBTNjs"><li><a href="Performance.html">Performance</a></li></div>
 		</div>
-		 <div class="extraNavItems">
+		<div class="extraNavItems">
 			<li><a href="Payroll.html">Payroll</a></li>
                 	<li><a href="Recruitment.html">Recruitment</a></li>
  	      		<li><a href="Performance.html">Performance</a></li>
-		</div> 
-      		
- 		  
+		</div> 	  
         </ul>
+ 	
 
 	<div class="MyRECT" id="mybackDIV">
         </div>
 <br><br><br>
 <div class="tab">
-  <button class="tablinks" onclick="openGraph(event, 'Diversity')">Diversity</button>
-  <button class="tablinks" onclick="openGraph(event, 'Recruiting')">Recruiting</button>
-  <button class="tablinks" onclick="openGraph(event, 'Turnover')">Turnover</button>
-  <button class="tablinks" onclick="openGraph(event, 'Retention')">Retention</button>
+  <button class="tablinks myUL" onclick="openGraph(event, 'Diversity')">Diversity</button>
+  <button class="tablinks myUL" onclick="openGraph(event, 'Recruiting')">Recruiting</button>
+  <button class="tablinks myUL" onclick="openGraph(event, 'Turnover')">Turnover</button>
+  <button class="tablinks myUL" onclick="openGraph(event, 'Retention')">Retention</button>
 </div>
 
 <br>
@@ -151,29 +150,61 @@
 <div id="hideshowDIV">
 <h2>Theme Settings</h2>
 
-<div id="themeSettings1">
-<button type="button" onclick="loadDoc()" class="themeBTN">Gold Background, Navy Bar</button>
+
+<div id="themeSettingsGrN">
+<button type="button" onclick="loadDocGrN()" class="themeBTN">Grey Background, Navy Bar</button>
 </div>
 
 <br>
 
-<div id="themeSettings2">
-<button type="button" onclick="loadDoc2()" class="themeBTN">Black Background, Navy Bar</button>
+<div id="themeSettingsBA">
+<button type="button" onclick="loadDocBA()" class="themeBTN">Black Background, Aqua Bar</button>
 </div>
 
 <br>
 
-<div id="themeSettings3">
-<button type="button" onclick="loadDoc3()" class="themeBTN">Aqua Background, Navy Bar</button>
+<div id="themeSettingsBG">
+<button type="button" onclick="loadDocBG()" class="themeBTN">Black Background, Gold Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsNB">
+<button type="button" onclick="loadDocNB()" class="themeBTN">Navy Background, Black Bar</button>
 </div>
 
 <br> 
 
-<div id="themeSettings4">
-<button type="button" onclick="loadDoc4()" class="themeBTN">Aqua Background, Black Bar</button>
+<div id="themeSettingsNG">
+<button type="button" onclick="loadDocNG()" class="themeBTN">Navy Background, Gold Bar</button>
 </div>
 
 <br>
+
+<div id="themeSettingsGB">
+<button type="button" onclick="loadDocGB()" class="themeBTN">Gold Background, Black Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsGN">
+<button type="button" onclick="loadDocGN()" class="themeBTN">Gold Background, Navy Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsAN">
+<button type="button" onclick="loadDocAN()" class="themeBTN">Aqua Background, Navy Bar</button>
+</div>
+
+<br> 
+
+<div id="themeSettingsAB">
+<button type="button" onclick="loadDocAB()" class="themeBTN">Aqua Background, Black Bar</button>
+</div>
+
+<br>
+
 
 <div id="reloadme">
 <button type="button" onclick="reloadme()" class="themeBTN">Reload</button>
