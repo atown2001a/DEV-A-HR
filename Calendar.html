@@ -113,14 +113,14 @@ color: black;
      <body>
      <h1 class="pgHeader">DEV-Xtreme HR</h1>
         <ul>
-          <li><a href="/DEV-A-HR">Dashboard</a></li>
-          <li><a href="Organisation.html">Organisation</a></li>
+          <li><a class="myUL" href="/DEV-A-HR">Dashboard</a></li>
+          <li><a class="myUL" href="Organisation.html">Organisation</a></li>
           <!-- <li><a href="Employees.html">Employees</a></li> -->
-          <li><a href="Directory.html">Directory</a></li>
-          <li><a href="Timesheet.html">Timesheet</a></li>
+          <li><a class="myUL" href="Directory.html">Directory</a></li>
+          <li><a class="myUL" href="Timesheet.html">Timesheet</a></li>
           <li><a class="active" href="Calendar.html">Calendar</a></li>
-          <li><a href="Files.html">Files</a></li>
-          <li><a href="Reports.html">Reports</a></li>
+          <li><a class="myUL" href="Files.html">Files</a></li>
+          <li><a class="myUL" href="Reports.html">Reports</a></li>
                 <div class="conaggainer" onclick="navBTNGroupftn()">
                     <h1><i class="bi bi-list"></i></h1>
                         <div class="payrollNavBTN" id="payrollNavBTNjs"><li><a href="Payroll.html">Payroll</a></li></div>
@@ -128,9 +128,9 @@ color: black;
                         <div class="performanceNavBTN" id="performanceNavBTNjs"><li><a href="Performance.html">Performance</a></li></div>
                 </div>
 		<div class="extraNavItems">
-                        <li><a href="Payroll.html">Payroll</a></li>
-                        <li><a href="Recruitment.html">Recruitment</a></li>
-                        <li><a href="Performance.html">Performance</a></li>
+                        <li><a class="myUL" href="Payroll.html">Payroll</a></li>
+                        <li><a class="myUL" href="Recruitment.html">Recruitment</a></li>
+                        <li><a class="myUL" href="Performance.html">Performance</a></li>
                 </div>
         </ul>
 
@@ -186,26 +186,75 @@ color: black;
 <button onclick="HideOrShow()" class="themeBTN">Hide / Show</button>
 <div id="hideshowDIV">
 <h3>Theme Settings</h3>
+
 <div id="themeSettings1">
 <button type="button" onclick="loadDoc()" class="themeBTN">Gold Background, Navy Bar</button>
 </div>
 
 <br>
 
-<div id="themeSettings2">
-<button type="button" onclick="loadDoc2()" class="themeBTN">Black Background, Navy Bar</button>
+<div id="themeSettingsGrN">
+<button type="button" onclick="loadDocGrN()" class="themeBTN">Grey Background, Navy Bar</button>
 </div>
 
 <br>
 
-<div id="themeSettings3">
-<button type="button" onclick="loadDoc3()" class="themeBTN">Aqua Background, Navy Bar</button>
+<div id="themeSettingsBA">
+<button type="button" onclick="loadDocBA()" class="themeBTN">Black Background, Aqua Bar</button>
 </div>
 
 <br>
 
-<div id="themeSettings4">
-<button type="button" onclick="loadDoc4()" class="themeBTN">Aqua Background, Black Bar</button>
+<div id="themeSettingsBG">
+<button type="button" onclick="loadDocBG()" class="themeBTN">Black Background, Gold Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsNB">
+<button type="button" onclick="loadDocNB()" class="themeBTN">Navy Background, Black Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsNG">
+<button type="button" onclick="loadDocNG()" class="themeBTN">Navy Background, Gold Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsGB">
+<button type="button" onclick="loadDocGB()" class="themeBTN">Gold Background, Black Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsGN">
+<button type="button" onclick="loadDocGN()" class="themeBTN">Gold Background, Navy Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsAN">
+<button type="button" onclick="loadDocAN()" class="themeBTN">Aqua Background, Navy Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsAB">
+<button type="button" onclick="loadDocAB()" class="themeBTN">Aqua Background, Black Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsBeN">
+<button type="button" onclick="loadDocBeN()" class="themeBTN">Beige Background, Navy Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsBeB">
+<button type="button" onclick="loadDocBeB()" class="themeBTN">Beige Background, Black Bar</button>
 </div>
 
 <br>
