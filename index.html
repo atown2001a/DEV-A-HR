@@ -6,14 +6,15 @@
 	<meta name="author" content="Ahmed Almeleh">
 	<meta name="generator" content="Fedora Linux / CENTOS Stream, GNU Namo">        
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <link rel="stylesheet" href="Stylesheet.css"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ 	<link rel="stylesheet" href="Stylesheet.css"> 
 	<script src="Script.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 
 	<title>DEV-Xtreme HR</title>        
 	<style>
+            @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
             .myChart-M-F
             {
                 width: 50%;
@@ -43,61 +44,68 @@
                 float: left;
                 z-index: -1;
             }
+           .pos {
+		position: absolute;
+		top: 38.5em;
+		left: 59.2em;
+    		width: 10em;
+                height: 10em;
+                z-index: -1;
+           }
        </style>
      </head>
     <body>
         <h1 class="pgHeader">DEV-Xtreme HR</h1>
 	<ul>
           <li><a class="active" href="/DEV-A-HR">Dashboard</a></li>
-	  <li><a href="Organisation.html">Organisation</a></li>	
+	  <li><a  class="myUL" href="Organisation.html">Organisation</a></li>	
 	  <!-- <li><a href="Employees.html">Employees</a></li> -->
-          <li><a href="Directory.html">Directory</a></li>
-	  <li><a href="Timesheet.html">Timesheet</a></li>
-          <li><a href="Calendar.html">Calendar</a></li>
-	  <li><a href="Files.html">Files</a></li>
-	  <li><a href="Reports.html">Reports</a></li>	   
+          <li><a class="myUL" href="Directory.html">Directory</a></li>
+	  <li><a class="myUL" href="Timesheet.html">Timesheet</a></li>
+          <li><a class="myUL" href="Calendar.html">Calendar</a></li>
+	  <li><a class="myUL" href="Files.html">Files</a></li>
+	  <li><a class="myUL"  href="Reports.html">Reports</a></li>	   
  	  	<div class="conaggainer" onclick="navBTNGroupftn()">	       
 	       	    <h1><i class="bi bi-list"></i></h1>
 	       		<div class="payrollNavBTN" id="payrollNavBTNjs"><li><a href="Payroll.html">Payroll</a></li></div>
                 	<div class="recruitmentNavBTN" id="recruitmentNavBTNjs""><li><a href="Recruitment.html">Recruitment</a></li></div>
  	       		<div class="performanceNavBTN" id="performanceNavBTNjs"><li><a href="Performance.html">Performance</a></li></div>
 		</div>
-		 <div class="extraNavItems">
-			<li><a href="Payroll.html">Payroll</a></li>
-                	<li><a href="Recruitment.html">Recruitment</a></li>
- 	      		<li><a href="Performance.html">Performance</a></li>
-		</div> 
-      		
- 		  
+		<div class="extraNavItems">
+			<li><a class="myUL" href="Payroll.html">Payroll</a></li>
+                	<li><a class="myUL" href="Recruitment.html">Recruitment</a></li>
+ 	      		<li><a class="myUL" href="Performance.html">Performance</a></li>
+		</div> 	  
         </ul>
+ 	
 
 	<div class="MyRECT" id="mybackDIV">
         </div>
 <br><br><br>
-<div class="tab">
-  <button class="tablinks" onclick="openGraph(event, 'Diversity')">Diversity</button>
-  <button class="tablinks" onclick="openGraph(event, 'Recruiting')">Recruiting</button>
-  <button class="tablinks" onclick="openGraph(event, 'Turnover')">Turnover</button>
-  <button class="tablinks" onclick="openGraph(event, 'Retention')">Retention</button>
+<h2 class="container">Dashboard</h2>
+<div class="tab container mt-3">
+  <button class="tablinks mt-2" onclick="openGraph(event, 'Diversity')">Diversity</button>
+  <button class="tablinks mt-2" onclick="openGraph(event, 'Recruiting')">Recruiting</button>
+  <button class="tablinks mt-2" onclick="openGraph(event, 'Turnover')">Turnover</button>
+  <button class="tablinks mt-2" onclick="openGraph(event, 'Retention')">Retention</button>
 </div>
 
 <br>
 <br>
-
 <br>
-<div id="Diversity" class="tabcontent">
-        <canvas id="myCahart" class="myChart-M-F"  style="width:100%;max-width:600px"></canvas>
-        <canvas id="myChart" class="myChart-A-G" style="width:100%;max-width:600px"></canvas>
-        <canvas id="myCatChart" class="myCatego2ry" style="width:100%;max-width:600px"></canvas>
-        <canvas id="myRANKChart"  class="My-E-R" style="width:100%;max-width:600px"></canvas>
+<br>
+<div id="Diversity" class="tabcontent container">
+        <canvas id="myCahart" class="myChart-M-F"  style="width:100%;max-width:400px"></canvas>
+        <canvas id="myChart" class="myChart-A-G" style="width:100%;max-width:400px"></canvas>
+	<canvas id="myCatChart" class="myCatego2ry" style="width:100%;max-width:400px"></canvas>
+	<canvas id="myRANKChart"  class="My-E-R" style="width:100%;max-width:400px"></canvas>
 
-<pre>
-
-<table class="table table-dark table-striped table-hover">
+<table class="table table-dark table-striped table-hover pos">
   <thead>
     <tr>
       <th scope="col"></th>
       <th scope="col">Employees</th>
+      <th scope="col">No</th>
     </tr>
   </thead>
   <tbody>
@@ -106,7 +114,6 @@
       <td>Male Employees</td>
       <td>2</td>
     </tr>
-
     <tr>
       <th scope="row">2</th>
       <td>Female Employees</td>
@@ -114,10 +121,9 @@
     </tr>
   </tbody>
 </table>
-</pre>
 </div>
 
-<div id="Recruiting" class="tabcontent">
+<div id="Recruiting" class="tabcontent container">
  <canvas id="myCahart" class="myChart-M-F"  style="width:100%;max-width:600px"></canvas>
         <canvas id="myChart" class="myChart-A-G" style="width:100%;max-width:600px"></canvas>
         <canvas id="myCatChart" class="myCatego2ry" style="width:100%;max-width:600px"></canvas>
@@ -126,7 +132,7 @@
   <p></p> 
 </div>
 
-<div id="Turnover" class="tabcontent">
+<div id="Turnover" class="tabcontent container">
  <canvas id="myCahart" class="myChart-M-F"  style="width:100%;max-width:600px"></canvas>
         <canvas id="myChart" class="myChart-A-G" style="width:100%;max-width:600px"></canvas>
         <canvas id="myCatChart" class="myCatego2ry" style="width:100%;max-width:600px"></canvas>
@@ -134,7 +140,7 @@
   <p></p>
 </div>
 
-<div id="Retention" class="tabcontent">
+<div id="Retention" class="tabcontent container">
  <canvas id="myCahart" class="myChart-M-F"  style="width:100%;max-width:600px"></canvas>
         <canvas id="myChart" class="myChart-A-G" style="width:100%;max-width:600px"></canvas>
         <canvas id="myCatChart" class="myCatego2ry" style="width:100%;max-width:600px"></canvas>
@@ -151,29 +157,73 @@
 <div id="hideshowDIV">
 <h2>Theme Settings</h2>
 
-<div id="themeSettings1">
-<button type="button" onclick="loadDoc()" class="themeBTN">Gold Background, Navy Bar</button>
+
+<div id="themeSettingsGrN">
+<button type="button" onclick="loadDocGrN()" class="themeBTN">Grey Background, Navy Bar</button>
 </div>
 
 <br>
 
-<div id="themeSettings2">
-<button type="button" onclick="loadDoc2()" class="themeBTN">Black Background, Navy Bar</button>
+<div id="themeSettingsBA">
+<button type="button" onclick="loadDocBA()" class="themeBTN">Black Background, Aqua Bar</button>
 </div>
 
 <br>
 
-<div id="themeSettings3">
-<button type="button" onclick="loadDoc3()" class="themeBTN">Aqua Background, Navy Bar</button>
+<div id="themeSettingsBG">
+<button type="button" onclick="loadDocBG()" class="themeBTN">Black Background, Gold Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsNB">
+<button type="button" onclick="loadDocNB()" class="themeBTN">Navy Background, Black Bar</button>
 </div>
 
 <br> 
 
-<div id="themeSettings4">
-<button type="button" onclick="loadDoc4()" class="themeBTN">Aqua Background, Black Bar</button>
+<div id="themeSettingsNG">
+<button type="button" onclick="loadDocNG()" class="themeBTN">Navy Background, Gold Bar</button>
 </div>
 
 <br>
+
+<div id="themeSettingsGB">
+<button type="button" onclick="loadDocGB()" class="themeBTN">Gold Background, Black Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsGN">
+<button type="button" onclick="loadDocGN()" class="themeBTN">Gold Background, Navy Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsAN">
+<button type="button" onclick="loadDocAN()" class="themeBTN">Aqua Background, Navy Bar</button>
+</div>
+
+<br> 
+
+<div id="themeSettingsAB">
+<button type="button" onclick="loadDocAB()" class="themeBTN">Aqua Background, Black Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsBeN">
+<button type="button" onclick="loadDocBeN()" class="themeBTN">Beige Background, Navy Bar</button>
+</div>
+
+<br> 
+
+<div id="themeSettingsBeB">
+<button type="button" onclick="loadDocBeB()" class="themeBTN">Beige Background, Black Bar</button>
+</div>
+
+<br>
+
 
 <div id="reloadme">
 <button type="button" onclick="reloadme()" class="themeBTN">Reload</button>

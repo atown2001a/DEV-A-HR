@@ -1,81 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head>        
         <meta charset="utf-8">
-	<meta name="description" content="The most X-treme HR cloud - Performance">
+	<meta name="description" content="The most X-treme HR cloud - Payroll">
 	<meta name="author" content="Ahmed Almeleh">
 	<meta name="generator" content="Fedora Linux / CENTOS Stream, GNU Namo">        
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
         <link rel="stylesheet" href="Stylesheet.css">
-	<script src="Script.js"></script>
-	<title>Performance</title>
-        <style>
-            .performanceNavBTN
-            {
-                background-color: maroon;
-            }
-        </style>
-    </head>
+	<script src="Script.js"></script> 
+	<title>Permformance</title>        
+	<style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
+	.performanceNavBTN{
+	  background-color:maroon;
+	}
+        .contrastHelper {
+	color: white;
+	}
+ 	</style>
+    </head>
     <body>
-  <h1 class="pgHeader">DEV-Xtreme HR</h1>
+      <h1 class="pgHeader">DEV-Xtreme HR</h1>
         <ul>
-          <li><a href="/DEV-A-HR">Dashboard</a></li>
-          <li><a href="Organisation.html">Organisation</a></li>
+          <li><a class="myUL" href="/DEV-A-HR">Dashboard</a></li>
+          <li><a class="myUL" href="Organisation.html">Organisation</a></li>
           <!-- <li><a href="Employees.html">Employees</a></li> -->
-          <li><a href="Directory.html">Directory</a></li>
-          <li><a href="Timesheet.html">Timesheet</a></li>
-          <li><a href="Calendar.html">Calendar</a></li>
-          <li><a href="Files.html">Files</a></li>
-          <li><a href="Reports.html">Reports</a></li>
+          <li><a class="myUL" href="Directory.html">Directory</a></li>
+          <li><a class="myUL" href="Timesheet.html">Timesheet</a></li>
+          <li><a class="myUL" href="Calendar.html">Calendar</a></li>
+          <li><a class="myUL" href="Files.html">Files</a></li>
+          <li><a class="myUL" href="Reports.html">Reports</a></li>
                 <div class="conaggainer" onclick="navBTNGroupftn()">
                     <h1><i class="bi bi-list active"></i></h1>
                         <div class="payrollNavBTN" id="payrollNavBTNjs"><li><a href="Payroll.html">Payroll</a></li></div>
                         <div class="recruitmentNavBTN" id="recruitmentNavBTNjs"><li><a href="Recruitment.html">Recruitment</a></li></div>
-                        <div class="performanceNavBTN" id="performanceNavBTNjs"><li><a href="Performance.html">Performance</a></li></div>                
-		</div>
-		<div class="extraNavItems">
-                        <li><a href="Payroll.html">Payroll</a></li>
-                        <li><a href="Recruitment.html">Recruitment</a></li>
-                        <li><a href="Performance.html" class="active">Performance</a></li>
+                        <div class="performanceNavBTN" id="performanceNavBTNjs"><li><a href="Performance.html">Performance</a></li></div>
                 </div>
- 		
+ 		<div class="extraNavItems">
+                        <li><a class="myUL" href="Payroll.html">Payroll</a></li>
+                        <li><a class="myUL" href="Recruitment.html">Recruitment</a></li>
+                        <li><a class="active myUL" href="Performance.html">Performance</a></li>
+                </div>
         </ul>
-  <div class="MyRECT" id="mybackDIV">
-        </div>
+
+        <div class="MyRECT" id="mybackDIV">
+      	</div>
 <!-- HTML -->
 <br>
 <br>
 <br>
+<br>
+<h2 class="container">Peformance</h2>
 
+<div class="container mt-3">
+ <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Performance Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>90%</td>
+     </tr>
 
+     <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+	<td>80%</td>   	
+     </tr>
 
+     <tr>
+        <td>Kay</td>
+        <td>Dooley</td>
+        <td>70%</td>
+     </tr>
+    </tbody>
+  </table>
+</div>
+<br>
 <button onclick="HideOrShow()" class="themeBTN">Hide / Show</button>
 <div id="hideshowDIV">
 <h3>Theme Settings</h3>
-<div id="themeSettings1">
-<button type="button" onclick="loadDoc()" class="themeBTN">Gold Background, Navy Bar</button>
+
+<div id="themeSettingsGrN">
+<button type="button" onclick="loadDocGrN()" class="themeBTN">Grey Background, Navy Bar</button>
 </div>
 
 <br>
 
-<div id="themeSettings2">
-<button type="button" onclick="loadDoc2()" class="themeBTN">Black Background, Navy Bar</button>
+<div id="themeSettingsBA">
+<button type="button" onclick="loadDocBA()" class="themeBTN">Black Background, Aqua Bar</button>
 </div>
 
 <br>
 
-<div id="themeSettings3">
-<button type="button" onclick="loadDoc3()" class="themeBTN">Aqua Background, Navy Bar</button>
+<div id="themeSettingsBG">
+<button type="button" onclick="loadDocBG()" class="themeBTN">Black Background, Gold Bar</button>
 </div>
 
 <br>
 
-<div id="themeSettings4">
-<button type="button" onclick="loadDoc4()" class="themeBTN">Aqua Background, Black Bar</button>
+<div id="themeSettingsNB">
+<button type="button" onclick="loadDocNB()" class="themeBTN">Navy Background, Black Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsNG">
+<button type="button" onclick="loadDocNG()" class="themeBTN">Navy Background, Gold Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsGB">
+<button type="button" onclick="loadDocGB()" class="themeBTN">Gold Background, Black Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsGN">
+<button type="button" onclick="loadDocGN()" class="themeBTN">Gold Background, Navy Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsAN">
+<button type="button" onclick="loadDocAN()" class="themeBTN">Aqua Background, Navy Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsAB">
+<button type="button" onclick="loadDocAB()" class="themeBTN">Aqua Background, Black Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsBeN">
+<button type="button" onclick="loadDocBeN()" class="themeBTN">Beige Background, Navy Bar</button>
+</div>
+
+<br>
+
+<div id="themeSettingsBeB">
+<button type="button" onclick="loadDocBeB()" class="themeBTN">Beige Background, Black Bar</button>
 </div>
 
 <br>
@@ -83,5 +159,44 @@
 <div id="reloadme">
 <button type="button" onclick="reloadme()" class="themeBTN">Reload</button>
 </div>
+<script>
+function myCalc1() {
+let b = 2100;
+let c = 200;
+let d = 31.20;
+let a = b - c + d; 
+document.getElementById("calc1").innerHTML = "£" + a + "0";
+}
+
+myCalc1();
+
+
+function myCalc2() {
+let b = 2100;
+let c = 200;
+let d = 31.20;
+let a = b - c + d; 
+document.getElementById("calc2").innerHTML = "£" + a + "0";
+}
+
+myCalc2();
+
+function myCalc3() {
+let b = 2100;
+let c = 200;
+let d = 31.20;
+let a = b - c + d; 
+document.getElementById("calc3").innerHTML = "£" + a + "0";
+}
+
+myCalc3();
+
+function myCalc4() {
+let a =  1931.20;
+document.getElementById("calc4").innerHTML = "£" + a * 3;
+}
+
+myCalc4();
+</script>
     </body>
 </html>
