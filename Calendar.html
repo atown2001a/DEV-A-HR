@@ -4,10 +4,10 @@
         <meta charset="utf-8">
 	<meta name="description" content="The most X-treme HR cloud - Calendar">
 	<meta name="author" content="Ahmed Almeleh">
-	<meta name="generator" content="Fedora Linux / CENTOS Stream, GNU Namo">        
+	<meta name="generator" content="Debain / CENTOS Stream, GNU Namo">        
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="Stylesheet.css">
 	<script src="Script.js"></script>
 	<script src="fullcalendar/dist/index.global.js"></script>	 
@@ -113,9 +113,8 @@
      <body>
      <h1 class="pgHeader">DEV-Xtreme HR</h1>
         <ul>
-          <li><a class="myUL" href="/DEV-A-HR">Dashboard</a></li>
+          <li><a class="myUL" href="/">Dashboard</a></li>
           <li><a class="myUL" href="Organisation.html">Organisation</a></li>
-          <!-- <li><a href="Employees.html">Employees</a></li> -->
           <li><a class="myUL" href="Directory.html">Directory</a></li>
           <li><a class="myUL" href="Timesheet.html">Timesheet</a></li>
           <li><a class="active" href="Calendar.html">Calendar</a></li>
@@ -127,14 +126,9 @@
                         <div class="recruitmentNavBTN" id="recruitmentNavBTNjs"><li><a href="Recruitment.html">Recruitment</a></li></div>
                         <div class="performanceNavBTN" id="performanceNavBTNjs"><li><a href="Performance.html">Performance</a></li></div>
                 </div>
-		<div class="extraNavItems">
-                        <li><a class="myUL" href="Payroll.html">Payroll</a></li>
-                        <li><a class="myUL" href="Recruitment.html">Recruitment</a></li>
-                        <li><a class="myUL" href="Performance.html">Performance</a></li>
-                </div>
         </ul>
 <br><br><br><br>
-<h2 class="pgHeader">Calendar</h2>
+<h2 class="pgHeader" style="padding-left:20px;">Calendar</h2>
   <div class="MyRECT" id="mybackDIV">
         </div>
  <br><br>
@@ -183,15 +177,8 @@
 <br>
 <br>
 <br>
-
-<button onclick="HideOrShow()" class="themeBTN">Hide / Show</button>
-<div id="hideshowDIV">
-<h3>Theme Settings</h3>
-
-<div id="themeSettings1">
-<button type="button" onclick="loadDoc()" class="themeBTN">Gold Background, Navy Bar</button>
-</div>
-
+<button onclick="HideOrShow()"><h2 class="themeBTN">Theme Settings</h2></button>
+<div id="hideshowDIV" style="display: none;">
 <br>
 
 <div id="themeSettingsGrN">
@@ -216,7 +203,7 @@
 <button type="button" onclick="loadDocNB()" class="themeBTN">Navy Background, Black Bar</button>
 </div>
 
-<br>
+<br> 
 
 <div id="themeSettingsNG">
 <button type="button" onclick="loadDocNG()" class="themeBTN">Navy Background, Gold Bar</button>
@@ -240,7 +227,7 @@
 <button type="button" onclick="loadDocAN()" class="themeBTN">Aqua Background, Navy Bar</button>
 </div>
 
-<br>
+<br> 
 
 <div id="themeSettingsAB">
 <button type="button" onclick="loadDocAB()" class="themeBTN">Aqua Background, Black Bar</button>
@@ -252,13 +239,14 @@
 <button type="button" onclick="loadDocBeN()" class="themeBTN">Beige Background, Navy Bar</button>
 </div>
 
-<br>
+<br> 
 
 <div id="themeSettingsBeB">
 <button type="button" onclick="loadDocBeB()" class="themeBTN">Beige Background, Black Bar</button>
 </div>
 
 <br>
+
 
 <div id="reloadme">
 <button type="button" onclick="reloadme()" class="themeBTN">Reload</button>

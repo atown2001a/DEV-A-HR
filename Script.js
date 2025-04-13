@@ -140,11 +140,4 @@ location.reload(false);
              } else {
                x.style.display = "none";
                }
-
-            var x = document.getElementById("mybackDIV");
-             if (x.style.display === "none") {
-               x.style.display = "block";
-             } else {
-               x.style.display = "none";
-               }
             }

@@ -45,9 +45,9 @@
            }
 
            .conaggainer {
-               position: absolute;
+               position: absolute;;
                top: 58px;
-               right: 0px;
+               right: -2.4em;   
                display: inline-block;
                cursor: pointer;
            }
@@ -83,20 +83,12 @@
 		color: white;
 	   }  
 
-	   .MyRECT {  
-		display: none;
-	   }
-
 	   p, h1,h2,h3,h4,h5,h6 {
 	      color: white;
 	   }
 
            i {
-	      color: white;
-	   }
-
-
-           i {
+	       color: white;
 	        position: absolute;
                 top: 0em;
 	        /* For Firefox (Recommended for DAHR) */
