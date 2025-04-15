@@ -6,10 +6,56 @@
         <meta name="author" content="Ahmed AL-Meleh">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<link rel="stylesheet" href="Stylesheet.css">
 	<script src="Script.js"></script>
 	<title>Organisation</title>
+      <script type="text/javascript">
+           google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+        data.addRows([
+          [{'v':'Ahmed', 'f':'Ahmed<div style="color:red; font-style:italic">President</div>'},
+           '', 'The President'],
+          [{'v':'Jim', 'f':'Jim<div style="color:red; font-style:italic">Vice President</div>'},
+           'Ahmed', 'VP'],
+         [{'v':'Alice', 'f':'Alice<div style="color:red; font-style:italic">Director of Human Resources</div>'},
+	 'Ahmed', 'HR'],
+         [{'v':'Emily', 'f':'Emily<div style="color:red; font-style:italic">Human Resources Assistant</div>'},
+	 'Alice', 'HR Assistant'],
+         [{'v':'Debbie', 'f':'Debbie<div style="color:red; font-style:italic">Director of Finance</div>'},
+	 'Jim', 'Finanace Director'],
+         [{'v':'Matt', 'f':'Matt<div style="color:red; font-style:italic">Accountant</div>'},
+	 'Debbie', 'Accountant'],
+         
+	[{'v':'Bob', 'f':'Bob<div style="color:red; font-style:italic">Director of IT Services</div>'},
+	 'Jim', 'Director of IT'],
+         [{'v':'Josh', 'f':'Josh<div style="color:red; font-style:italic">IT Service Manager</div>'},
+	 'Bob', 'IT Service Manager'],
+         [{'v':'John', 'f':'John<div style="color:red; font-style:italic">Network Manager</div>'},
+	 'Bob', 'Network Manager'],
+         [{'v':'Chris', 'f':'Chris<div style="color:red; font-style:italic">Senior IT Techncician</div>'},
+	 'Josh', 'Sr IT Technician'],
+         [{'v':'Max', 'f':'Max<div style="color:red; font-style:italic">IT Technician</div>'},
+	 'Josh', 'IT Technician'],
+        [{'v':'Roman', 'f':'Roman<div style="color:red; font-style:italic">Web Developer</div>'},
+         'Josh', 'Web Developer'],  
+	]);
+
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('OrgChart'));
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        chart.draw(data, {'allowHtml':true});
+      }
+   </script>
 	</head>
     <body>
       <h1 class="pgHeader">DEV-Xtreme HR</h1>
@@ -33,7 +79,11 @@
 <br><br>
 <h2 class="pgHeader" style="padding-left:20px;"">Organisation</h2>
 <br><br>
+
+<div id="OrgChart"></div>
+<!--
 <img src="https://cdn-cashy-static-assets.lucidchart.com/marketing/blog/2017Q1/7-types-organizational-structure/hierarchal-org-structure-template.png" width="35%">
+-->
 <br><br>
  
 <button onclick="HideOrShow()"><h2 class="themeBTN">Theme Settings</h2></button>
