@@ -47,17 +47,17 @@
 <div class="container mt-3">
   <div class="row">
     <div class="col p-3 bg-dark"><h3 class="fst-bold fst-italic">Total Pay</h3></div>
-    <div class="col p-3 bg-warning"><h4 id="calc4" class="contrasthelper fst-bold fst-italic"></h4></div>
+    <div class="col p-3 bg-warning"><h4 id="calc4" class="contrasthelper fst-bold fst-italic" contenteditable="true"></h4></div>
 
     <div class="col p-3 bg-dark text-white"><h3 class="fst-bold fst-italic">Payroll Date<h3></div>
-    <div class="col p-3 bg-warning text-white"><h4 class="contrasthelper fst-bold fst-italic">04/02/2024<h4></div>
+    <div class="col p-3 bg-warning text-white"><h4 class="contrasthelper fst-bold fst-italic" contenteditable="true"><h4></div>
    
    <div class="col p-3 bg-dark"><h3 class="fst-bold fst-italic">Employee Pay Date</h3></div>
-   <div class="col p-3 bg-warning"><h4 class="contrasthelper fst-bold fst-italic">05/02/2024</h4</div>
+   <div class="col p-3 bg-warning"><h4 class="contrasthelper fst-bold fst-italic" contenteditable="true"></h4</div>
 
 </div>
    <div class="col p-3 bg-dark text-white"><h3 class="fst-bold fst-italic">Next Payroll Date</h3></div>
-    <div class="col p-3 bg-warning text-white"><h4 class="contrasthelper fst-bold fst-italic">05/03/2024</h4></div>
+    <div class="col p-3 bg-warning text-white"><h4 class="contrasthelper fst-bold fst-italic" contenteditable="true"></h4></div>
 </div>
 </div>
 <br>
@@ -76,32 +76,91 @@
     </thead>
     <tbody>
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>£2100</td>
-	<td>£200</td>
-        <td>£31.20</td></div>
-        <td id="calc1"></td></tr>
+        <td>Jim</td>
+        <td>J.</td>
+        <td contenteditable="true"></td>
+	<td contenteditable="true"></td>
+        <td contenteditable="true"></td></div>
+        <td contenteditable="true"></td></tr>
 
      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>£2100</td>
-	<td>£200</td>
-        <td>£31.20</td></div>
-        <td id="calc2"></td></tr>
+        <td>Debbie</td>
+        <td>D.</td>
+        <td contenteditable="true"></td>
+	<td contenteditable="true"></td>
+        <td contenteditable="true"></td></div>
+        <td contenteditable="true"></td></tr>
    	
      <tr>
-        <td>Kay</td>
-        <td>Dooley</td>
-        <td>£2100</td>
-        <td>£200</td>
-        <td>£31.20</td></div>
-        <td id="calc3"></td></tr>
+        <td>Matt</td>
+        <td>M.</td>
+	<td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td></div>
+        <td contenteditable="true"></td></tr>
+
+     <tr>
+        <td>Bob</td>
+        <td>B.</td>
+	<td contenteditable="true"></td>
+
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td></div>
+        <td contenteditable="true"></td></tr>
+
+     <tr>
+        <td>Josh</td>
+        <td>J.</td>
+	<td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td></div>
+        <td contenteditable="true"></td></tr>
+
+     <tr>
+        <td>Chris</td>
+        <td>C.</td>
+	<td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td></div>
+        <td contenteditable="true"></td></tr>
+
+     <tr>
+        <td>Max</td>
+        <td>M.</td>
+	<td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td></div>
+        <td contenteditable="true"></td></tr>
+
+     <tr>
+        <td>Roman</td>
+        <td>R.</td>
+	<td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td></div>
+        <td contenteditable="true"></td></tr>
+
+     <tr>
+        <td>Barry</td>
+        <td>B.</td>
+	<td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td></div>
+        <td contenteditable="true"></td></tr>
+
+     <tr>
+        <td>Emily</td>
+        <td>E.</td>
+	<td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td></div>
+        <td contenteditable="true"></td></tr>
+
     </tbody>
   </table>
 </div>
-<br>
+
+
 <button onclick="HideOrShow()"><h2 class="themeBTN">Theme Settings</h2></button>
 <div id="hideshowDIV" style="display: none;">
 <br>
@@ -218,46 +277,5 @@
 </div>
 
 <br>
-
-
-<script>
-function myCalc1() {
-let b = 2100;
-let c = 200;
-let d = 31.20;
-let a = b - c + d; 
-document.getElementById("calc1").innerHTML = "£" + a + "0";
-}
-
-myCalc1();
-
-
-function myCalc2() {
-let b = 2100;
-let c = 200;
-let d = 31.20;
-let a = b - c + d; 
-document.getElementById("calc2").innerHTML = "£" + a + "0";
-}
-
-myCalc2();
-
-function myCalc3() {
-let b = 2100;
-let c = 200;
-let d = 31.20;
-let a = b - c + d; 
-document.getElementById("calc3").innerHTML = "£" + a + "0";
-}
-
-myCalc3();
-
-function myCalc4() {
-let a =  1931.20;
-document.getElementById("calc4").innerHTML = "£" + a * 3;
-}
-
-myCalc4();
-</script>
-    </body>
+</body>
 </html>
