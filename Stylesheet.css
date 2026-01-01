@@ -46,8 +46,8 @@
 
            .conaggainer {
                position: absolute;;
-               top: 3.6em;
-               right: -1.6em;   
+               top: 3.6em; 
+               right:  -1.6em;  	  
                display: inline-block;
                cursor: pointer;
            }

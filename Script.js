@@ -242,6 +242,58 @@ location.reload(false);
                x.style.display = "none";
                }
             }
+
+
+const userAgent = navigator.userAgent.toLowerCase();
+
+// Detect Firefox
+const isFirefox = userAgent.includes('firefox') || userAgent.includes('fxios');
+
+// Detect Chrome
+const isChrome = userAgent.includes('chrome') && 
+                 !userAgent.includes('edg') && 
+                 !userAgent.includes('opr');
+
+if (isFirefox) {
+    console.log("Running Firefox-specific code...");
+
+
+
+function checkZoom() {
+    // A common way to estimate zoom, though imperfect across all setups
+    var zoomLevel = Math.round(window.devicePixelRatio * 100);
+
+    	    // This is a rough estimation. For 90% browser zoom, devicePixelRatio might be around 0.9 on standard displays.
+   	    // On high DPI displays, this gets complicated.
+	    // A better, but more complex, method involves measuring a fixed-size element in CSS pixels vs device pixels.
+
+	    // Let's assume for a standard 100% OS scale, 90% browser zoom gives 0.9 dPR
+	    // We'll set a tolerance range
+	    var requiredZoom = 90;
+//	    var tolerance = 10; // Allow for slight variations
+
+//	    var content = document.getElementById('content-wrapper');
+//	    var message = document.getElementById('zoom-message');
+
+    	    if (zoomLevel !== requiredZoom) {
+    
+		//    content.style.display = 'block';
+       		//    message.style.display = 'none';
+
+ 	     		document.body.style.display = 'none';  // Hide all content
+        		alert(`Page zoom is not at 90%. It's at ${zoomLevel}%.. Please set it to 90%`);
+    		} else {
+			document.body.style.display = 'block';  // Show content if zoom is 90%
+    		}
+	    }
+	window.onload = function() {
+	    checkZoom();
+	};
+
+} else if (isChrome) {
+// For Chrome Only
+    console.log("Running Chrome-specific code...");
+      document.body.style.zoom = "90%";
    function checkZoom() {
     // Get the current zoom level
     const zoomLevel = Math.round((window.outerWidth / window.innerWidth) * 100);
@@ -254,6 +306,8 @@ if (zoomLevel !== 90) {
     }
 }
 
-window.onload = function() {
-    checkZoom();
-};
+	window.onload = function() {
+	    checkZoom();
+	};
+
+}

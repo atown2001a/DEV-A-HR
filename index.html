@@ -53,8 +53,8 @@
                 z-index: -1;
            }
        </style>
-     </head>
-    <body onload="showAlert()">
+   </head>
+    <body>
         <h1 class="pgHeader">DEV-Xtreme HR</h1>
 	<ul>
           <li><a class="active" href="/">Dashboard</a></li>
@@ -279,8 +279,7 @@ function openGraph(evt, graphName) {
   document.getElementById(graphName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-</script>
-        <script>
+
             var xValues = ["Male", "Female"];
             var yValues = [2, 55];
             var barColors = [
@@ -390,22 +389,49 @@ function openGraph(evt, graphName) {
                   text: "Employees by Rank"
                 }
               }
-});
-     function checkZoom() {
+}); </script>
+<script>
+/*const userAgent = navigator.userAgent.toLowerCase();
+
+// Detect Firefox
+const isFirefox = userAgent.includes('firefox') || userAgent.includes('fxios');
+
+// Detect Chrome
+const isChrome = userAgent.includes('chrome') && 
+                 !userAgent.includes('edg') && 
+                 !userAgent.includes('opr');
+
+if (isFirefox) {
+    console.log("Running Firefox-specific code...");
+function showAlert(){
+   	 alert("Please set zoom level to 90%");
+	}
+} 
+else if (isChrome) {
+// For Chrome Only
+    console.log("Running Chrome-specific code...");
+
+   function ShowAlert(){
     // Get the current zoom level
     const zoomLevel = Math.round((window.outerWidth / window.innerWidth) * 100);
 
-if (zoomLevel !== 90) {
-        document.body.style.display = 'none';  // Hide all content
-        alert(`Page zoom is not at 90%. It's at ${zoomLevel}%.. Please set it to 90%`);
-    } else {
-        document.body.style.display = 'block';  // Show content if zoom is 90%
-    }
-}
+	if (zoomLevel !== 90) {
+       	        document.body.style.display = 'none';  // Hide all content
+	       	alert(`Page zoom is not at 90%. It's at ${zoomLevel}%.. Please set it to 90%`);
+	} 
+	else {
+	        document.body.style.display = 'block';  // Show content if zoom is 90%
+		}
+	}
 
 window.onload = function() {
-    checkZoom();
+    ShowAlert();
 };
-    	  </script>   
+
+} else {
+    console.log("Running fallback code for other browsers.");
+}
+*/
+</script>   
 </body>
 </html>
