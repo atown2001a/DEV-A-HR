@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
         <link rel="stylesheet" href="Stylesheet.css">
-	<script src="Script.js"></script> 
+	<script defer src="Script.js"></script> 
 	<title>Payroll</title>        
 	<style>
         @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
@@ -30,7 +30,7 @@
           <li><a class="myUL" href="Calendar.html">Calendar</a></li>
           <li><a class="myUL" href="Files.html">Files</a></li>
           <li><a class="myUL" href="Reports.html">Reports</a></li>
-                <div class="conaggainer" onclick="navBTNGroupftn()">
+                <div id="dropCON" class="conaggainer" onclick="navBTNGroupftn()">
                     <h1><i class="bi bi-list active"></i></h1>
                         <div class="payrollNavBTN" id="payrollNavBTNjs"><li><a href="Payroll.html">Payroll</a></li></div>
                         <div class="recruitmentNavBTN" id="recruitmentNavBTNjs"><li><a href="Recruitment.html">Recruitment</a></li></div>
@@ -165,55 +165,46 @@
 <div id="hideshowDIV" style="display: none;">
 <br>
 
+<div id="themeContainer">
 
 <!-- Black Backgrounds -->
 
 
+<button type="button" class="themeBTN" data-theme="BlGo">Black Background, Gold Bar</button>
+<br><br>
+<button type="button" class="themeBTN" data-theme="BlGr">Black Background, Green Bar</button>
+<br><br>
 
-<div id="themeSettingsBGold">
-<button type="button" onclick="loadDocBGold()" class="themeBTN">Black Background, Gold Bar</button>
-</div><br>
-
-<div id="themeSettingsBGreen">
-<button type="button" onclick="loadDocBGreen()" class="themeBTN">Black Background, Green Bar</button>
-</div><br>
-
-<div id="themeSettingsBeB">
-<button type="button" onclick="loadDocBeB()" class="themeBTN">Black Background, Beige Bar</button>
-</div><br>
+<button type="button" class="themeBTN" data-theme="BlB">Black Background, Beige Bar</button>
+<br><br>
 
 
 
 <!-- Navy Backgrounds -->
-<div id="themeSettingsNB">
-<button type="button" onclick="loadDocNB()" class="themeBTN">Navy Background, Black Bar</button>
-</div><br>
-<div id="themeSettingsNG">
-<button type="button" onclick="loadDocNG()" class="themeBTN">Navy Background, Gold Bar</button>
-</div><br>
+<button type="button" class="themeBTN" data-theme="NaB">Navy Background, Black Bar</button>
+<br><br>
 
-<div id="themeSettingsNGr">
-<button type="button" onclick="loadDocNGr()" class="themeBTN">Navy Background, Green Bar</button>
-</div><br>
+<button type="button" class="themeBTN" data-theme="NaGo">Navy Background, Gold Bar</button>
+<br> <br>
+
+<button type="button" class="themeBTN" data-theme="NaGr">Navy Background, Green Bar</button>
+<br><br>
 
 
 
 <!-- Gold Backgrounds -->
-<div id="themeSettingsGB">
-<button type="button" onclick="loadDocGB()" class="themeBTN">Gold Background, Black Bar</button>
-</div><br>
+<button type="button" class="themeBTN" data-theme="GoB">Gold Background, Black Bar</button>
+<br><br>
 
-<div id="themeSettingsGN">
-<button type="button" onclick="loadDocGN()" class="themeBTN">Gold Background, Navy Bar</button>
-</div><br>
+<button type="button" class="themeBTN" data-theme="GoN">Gold Background, Navy Bar</button>
+<br><br>
 
 
 
 <!-- Green Backgrounds -->
 
-<div id="themeSettingsGrB">
-<button type="button" onclick="loadDocGrB()" class="themeBTN">Green Background, Black Bar</button>
-</div><br>
+<button type="button" class="themeBTN" data-theme="GreB">Green Background, Black Bar</button>
+<br><br>
 
 <!-- NOT MADE YET
 <div id="themeSettingsGreenN">
@@ -228,23 +219,20 @@
 
 <!-- Beige Backgrounds -->
 
-<div id="themeSettingsBeiB">
-<button type="button" onclick="loadDocBeiB()" class="themeBTN">Beige Background, Black Bar</button>
-</div><br>
-<div id="themeSettingsBeiN">
-<button type="button" onclick="loadDocBeiN()" class="themeBTN">Beige Background, Navy Bar</button>
-</div><br>
+<button type="button"  class="themeBTN" data-theme="BeiB">Beige Background, Black Bar</button>
+<br><br>
 
-<div id="themeSettingsBeiG">
-<button type="button" onclick="loadDocBeiG()" class="themeBTN">Beige Background, Green Bar</button>
-</div><br>
+<button type="button"  class="themeBTN" data-theme="BeiN">Beige Background, Navy Bar</button>
+<br><br>
+
+<button type="button"  class="themeBTN" data-theme="BeiG">Beige Background, Green Bar</button>
+<br><br>
 
 
 
 <!-- Grey Backgrounds -->
-<div id="themeSettingsGrN">
-<button type="button" onclick="loadDocGrN()" class="themeBTN">Grey Background, Navy Bar</button>
-</div><br>
+<button type="button" class="themeBTN" data-theme="GrN">Grey Background, Navy Bar</button>
+<br><br>
 
 <!-- NOT MADE YET
 <div id="themeSettingsGraGo">
@@ -261,15 +249,10 @@
 </div><br>
 
 -->
-
-
-
-
 <!-- Aqua Background  -->
-<div id="themeSettingsAB">
-<button type="button" onclick="loadDocAB()" class="themeBTN">Aqua Background, Black Bar</button>
-</div><br>
-
+<button type="button" class="themeBTN" data-theme="AB">Aqua Background, Black Bar</button>
+<br><br>
+</div>
 
 <!--Reload Button -->
 <div id="reloadme">

@@ -7,216 +7,6 @@ function HideOrShow() {
   }
 }
 
-
-// Grey Background Navy Bar
-function loadDocGrN() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsGrN").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Grey/themeGrN.html");
-  xhttp.send();
-}
-
-
-/*
-// Black Background Navy bar
-function loadDocBN() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsBN").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Black/themeBN.html");
-  xhttp.send();
-}
-*/
-
-// Black Background Gold Bar
-function loadDocBGold() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsBGold").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Black/themeBG.html");
-  xhttp.send();
-}
-
-//  Background Black Green Bar
-function loadDocBGreen() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsBGreen").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Black/themeBGr.html");
-  xhttp.send();
-}
-
-
-// Black Background Beige bar
-function loadDocBeB() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsBeB").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Black/themeBeB.html");
-  xhttp.send();
-}
-
-
-
-
-
-// NAVY
-
-// Navy Background Black Bar
-function loadDocNB() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsNB").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Navy/themeNB.html");
-  xhttp.send();
-}
-
-// Navy Background Gold Bar 
-function loadDocNG() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsNG").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Navy/themeNG.html");
-  xhttp.send();
-}
-
-// Navy Background Green Bar 
-function loadDocNGr() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsNGr").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Navy/themeNGr.html");
-  xhttp.send();
-}
-
-// Navy Background Beige Bar 
-function loadDocNG() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsNG").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Navy/themeNG.html");
-  xhttp.send();
-}
-
-
-
-
-//Gold
-// Gold Background Black Bar
-function loadDocGB() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsGB").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Gold/themeGB.html");
-  xhttp.send();
-}
-
-// Gold Background Navy Bar
-function loadDocGN() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsGN").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Gold/themeGN.html");
-  xhttp.send();
-}
-
-// Green is too similar to Gold
-
-//Aqua
-
-// Aqua Background Black Bar
-function loadDocAB() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsAB").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Aqua/themeAB.html");
-  xhttp.send();
-}
-
-
-
-// Green
-
-// Green Background Black Bar
-function loadDocGrB() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsGrB").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Green/themeGrB.html");
-  xhttp.send();
-}
-
-
-/*
-// Green Background Navy Bar
-function loadDocGreenN() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsGreenN").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Green/themeGrN.html");
-  xhttp.send();
-}
-
-// Green Background Beige Bar
-function loadDocGrBe() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsGrBe").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Green/themeGrBe.html");
-  xhttp.send();
-}
-
-*/
-
-
-
-// Beige
-// Beige Background, Black Bar
-function loadDocBeiB() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsBeiB").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Beige/themeBeiB.html");
-  xhttp.send();
-}
-
-// Beige Background, Navy Bar
-function loadDocBeiN() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsBeiN").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Beige/themeBeiN.html");
-  xhttp.send();
-}
-
-
-// Beige Background, Green Bar
-function loadDocBeiG() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("themeSettingsBeiG").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "Themes/Beige/themeBeiG.html");
-  xhttp.send();
-}
 function reloadme() {
 location.reload(false);
 }
@@ -297,6 +87,10 @@ function checkZoom() {
    function checkZoom() {
     // Get the current zoom level
     const zoomLevel = Math.round((window.outerWidth / window.innerWidth) * 100);
+document.getElementById("dropCON").style.top = "3.6rem";
+document.getElementById("dropCON").style.right = "13rem";
+document.getElementById("dropCON").style.position = "absolute";
+
 
 if (zoomLevel !== 90) {
         document.body.style.display = 'none';  // Hide all content
@@ -311,3 +105,18 @@ if (zoomLevel !== 90) {
 	};
 
 }
+
+
+const themeMap = { BlB: "Themes/Black/themeBeB.html", GN: "Themes/Gold/themeGN.html", AB: "Themes/Aqua/themeAB.html", GrB:"Themes/Green/themeGrB.html",
+  // ...add the rest
+};
+function applyTheme(code) { const file = themeMap[code]; if (!file) return; const xhttp = new XMLHttpRequest(); xhttp.onload = function () { document.getElementById("themeContainer").innerHTML = this.responseText;
+  };
+  xhttp.open("GET", file, true); xhttp.send();
+  // disable active button (optional)
+  document.querySelectorAll(".themeBTN").forEach(b => b.disabled = false); const btn = document.querySelector(`.themeBTN[data-theme="${code}"]`); if (btn) btn.disabled = true; localStorage.setItem("themeCode", code);
+}
+document.addEventListener("DOMContentLoaded", () => { document.querySelectorAll(".themeBTN").forEach(btn => { btn.addEventListener("click", () => applyTheme(btn.dataset.theme));
+  });
+  applyTheme(localStorage.getItem("themeCode") || "GB");
+});
