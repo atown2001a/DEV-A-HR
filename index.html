@@ -52,6 +52,38 @@
                 height: 10em;
                 z-index: -1;
            }
+	#outerdiv {
+		width:1300px;
+		height:400px;
+		overflow: hidden;
+		position: relative;
+		border: 17px solid /* navy */ gold ;
+		border-radius: 20px; 
+	}
+
+	#innerifTOV {
+		position:absolute;
+		top: -61em;
+		left: -7em;
+		width:93em;
+		height:85em;
+	}
+
+	#inneriframe {
+		position:absolute; 
+		top: -8em; 
+		left: -7em; 
+		width:93em; 
+		height:85em;
+	}
+
+	#inneriframe2 {
+		position:absolute;
+		top: -22em;
+		left:-7em;
+		width:93em;
+		height:85em;
+	}
        </style>
    </head>
     <body>
@@ -105,12 +137,12 @@
     <tr class="table-warning">
      <th scope="row">1</th>
       <td>Male Employees</td>
-      <td>2</td>
+      <td>7</td>
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>Female Employees</td>
-      <td>55</td>
+      <td>2</td>
     </tr>
   </tbody>
 </table>
@@ -126,19 +158,21 @@
 </div>
 
 <div id="Turnover" class="tabcontent container">
- <canvas id="myCahart" class="myChart-M-F"  style="width:100%;max-width:600px"></canvas>
-        <canvas id="myChart" class="myChart-A-G" style="width:100%;max-width:600px"></canvas>
-        <canvas id="myCatChart" class="myCatego2ry" style="width:100%;max-width:600px"></canvas>
-        <canvas id="myRANKChart"  class="My-E-R" style="width:100%;max-width:600px"></canvas>
-  <p></p>
+<div id="outerdiv">
+<iframe src="https://vipdistrict.com/turnover-rate-calculator/" id="innerifTOV" height="400px" width="1000px""></iframe>
+</div>
 </div>
 
 <div id="Retention" class="tabcontent container">
- <canvas id="myCahart" class="myChart-M-F"  style="width:100%;max-width:600px"></canvas>
-        <canvas id="myChart" class="myChart-A-G" style="width:100%;max-width:600px"></canvas>
-        <canvas id="myCatChart" class="myCatego2ry" style="width:100%;max-width:600px"></canvas>
-        <canvas id="myRANKChart"  class="My-E-R" style="width:100%;max-width:600px"></canvas>
-  <p></p>
+<div id="outerdiv">
+
+<iframe src="https://www.myleswellbeing.com/calculators/employee-retention-rate-calculator" id="inneriframe" height="400px" width="1000px""></iframe> 
+
+<!--
+<iframe src="https://www.hive.hr/retention-calculator/?total=12&left=3" id="inneriframe2" height="400px" width="1000px""></iframe>
+-->
+
+</div>
 </div>
 
 <br>
@@ -163,7 +197,7 @@ function openGraph(evt, graphName) {
 }
 
             var xValues = ["Male", "Female"];
-            var yValues = [2, 55];
+            var yValues = [7, 2];
             var barColors = [
               "#b91d47",
               "#00aba9",
@@ -190,8 +224,8 @@ function openGraph(evt, graphName) {
             });
             
             //___________________________________________________________
-            var xValues = ["Under 18", "18-24", "25-30", "31-40"];
-            var yValues = [50, 55, 0, 0];
+            var xValues = ["18-24", "25-30", "31-40", "41-50"];
+            var yValues = [2, 3, 2, 2];
             var barColors = [
               "#b91d47",
               "#00aba9",
@@ -218,8 +252,8 @@ function openGraph(evt, graphName) {
             });
             
             //___________________________________________________________
-            var xValues = ["Execs", "HRs", "2IC", "Contributers"];
-            var yValues = [2, 8, 12, 0];
+            var xValues = ["Executive","Finance","Human Resources", "IT"];
+            var yValues = [1, 1, 1, 6];
             var barColors = [
               "#b91d47",
               "#00aba9",
@@ -246,8 +280,8 @@ function openGraph(evt, graphName) {
             });
             
             //___________________________________________________________
-            var xValues = ["CEO/Founder", "VP", "HECO", "ECO", "2IC", "3IC", "Blue OP", "Green OP", "OP"];
-            var yValues = [2, 8, 12, 0];
+            var xValues = ["CEO/Founder", "Director of a department", "Manager", "General Workforce"];
+            var yValues = [1, 3, 2, 3];
             var barColors = [
               "#b91d47",
               "#00aba9",
