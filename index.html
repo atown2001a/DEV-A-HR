@@ -54,7 +54,7 @@
            }
 	#outerdiv {
 		width:1300px;
-		height:400px;
+		height:480px;
 		overflow: hidden;
 		position: relative;
 		border: 17px solid /* navy */ gold ;
@@ -66,12 +66,19 @@
 		top: -61em;
 		left: -7em;
 		width:93em;
-		height:85em;
+		height:90em;
+	}
+	#innerifTOV2 {
+		position:absolute;
+		top: -54em;
+		left: -10em;
+		width:100em;
+		height:90em;
 	}
 
 	#inneriframe {
 		position:absolute; 
-		top: -8em; 
+		bottom: -50em; 
 		left: -7em; 
 		width:93em; 
 		height:85em;
@@ -79,10 +86,10 @@
 
 	#inneriframe2 {
 		position:absolute;
-		top: -22em;
+		top: -20em;
 		left:-7em;
 		width:93em;
-		height:85em;
+		height:90em;
 	}
        </style>
    </head>
@@ -159,17 +166,24 @@
 
 <div id="Turnover" class="tabcontent container">
 <div id="outerdiv">
-<iframe src="https://vipdistrict.com/turnover-rate-calculator/" id="innerifTOV" height="400px" width="1000px""></iframe>
+
+<iframe src="https://vipdistrict.com/turnover-rate-calculator" id="innerifTOV"></iframe>
+
+<!--
+<iframe src="https://www.breathehr.com/en-gb/resources/staff-turnover-calculator" id="innerifTOV2"></iframe>
+-->
+
 </div>
 </div>
 
 <div id="Retention" class="tabcontent container">
 <div id="outerdiv">
 
-<iframe src="https://www.myleswellbeing.com/calculators/employee-retention-rate-calculator" id="inneriframe" height="400px" width="1000px""></iframe> 
+
+<iframe src="https://www.myleswellbeing.com/calculators/employee-retention-rate-calculator" id="inneriframe"></iframe> 
 
 <!--
-<iframe src="https://www.hive.hr/retention-calculator/?total=12&left=3" id="inneriframe2" height="400px" width="1000px""></iframe>
+<iframe src="https://www.hive.hr/retention-calculator/?total=12&left=3" id="inneriframe2"></iframe>
 -->
 
 </div>
