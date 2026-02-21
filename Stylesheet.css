@@ -1,84 +1,19 @@
-          ul {
-             list-style-type: none;
-             margin: 0;
-             padding: 0;
-             overflow: hidden;
-             background-color: navy;
-           }
-
-           li {
-               float: left;
-               border-right:1px solid white;
-           }
-
-           li:last-child {
-               border-right: none;
-           }
-
-           li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-           }
-
-            li a:hover:not(.active) {
-                background-color: darkgreen;
-                color: white;
-           }
-	   /* li a:focus 
-                background-color: maroon;
-                color: lime;
-            */
-	   li a:hover {
-                background-color: maroon;
-                color: yellow;
-           }
 	   body {
 		background-color:black;
+	   	color: white;
 	   }
-	
-           .active {
-                background-color: maroon;
-                color: white;
-           }
 
-           .conaggainer {
-               position: absolute;;
-               top: 3.6em; 
-               right:  -1.6em;  	  
-               display: inline-block;
-               cursor: pointer;
-           }
 
-           .payrollNavBTN,  .recruitmentNavBTN,  .performanceNavBTN {
-		background-color: navy;
-                display: none;
-           }
+	.themeBTN {
+	background-color: navy;
+	color:white;
+	padding: 5px;
+	font-size: 17px;
+	}
 
-	   .payrollNavBTN:hover,  .recruitmentNavBTN:hover,  .performanceNavBTN:hover {
-		background-color: navy;
-		color: white;
-          }
+        
 
-           .payrollNavBTN {
-                position: absolute;
-                top: 3.5em;
-                right: 86.7em;
-           }
-
-           .recruitmentNavBTN {
-                position: absolute;
-                top: 7em;
-                right: 84.5em;
-
-           }
-           .performanceNavBTN {
-                position: absolute;
-                top:  10.5em;
-                right: 84.3em;
-           }
+/*
 	   .pgHeader { 
 		color: white;
 	   }  
@@ -86,66 +21,4 @@
 	   p, h1,h2,h3,h4,h5,h6 {
 	      color: white;
 	   }
-
-           i {
-	       color: white;
-	        position: absolute;
-                top: 0em;
-	        /* For Firefox (Recommended for DAHR) */
-                right: 35.7em;
-            }
-.tab {
-  overflow: visible;
-  border: 1px solid #ccc;
-  background-color: navy;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: darkgreen;
-  color: white;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: maroon;
-  color: white;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 10px 10px;
-  border: 1px solid #ccc;
-  border-top: none;
-  height: 500px;
-}
-
-.themeBTN {
-background-color: navy;
-color:white;
-padding: 5px;
-font-size: 17px;
-}
-
-@media only screen and (min-width: 992px) {
-    .extraNavItems {
- 	     display: none;
-    }
-}
-.myul {
-color: navy;
-}
+*/

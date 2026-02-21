@@ -7,37 +7,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
         <link rel="stylesheet" href="Stylesheet.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 	<script defer src="Script.js"></script> 
 	<title>Permformance</title>        
 	<style>
-        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
-	.performanceNavBTN{
-	  background-color:maroon;
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.min.css");
+	.active {
+	background-color:maroon;
 	}
-       .contrasthelper {
-          color: white;
-       }
- 	</style>
+	.dropA {
+	background-color:navy;color:white;
+	}
+     	</style>
     </head>
     <body>
       <h1 class="pgHeader">DEV-Xtreme HR</h1>
-        <ul>
-          <li><a class="myUL" href="/">Dashboard</a></li>
-          <li><a class="myUL" href="Organisation.html">Organisation</a></li>
-          <li><a class="myUL" href="Directory.html">Directory</a></li>
-          <li><a class="myUL" href="Timesheet.html">Timesheet</a></li>
-          <li><a class="myUL" href="Calendar.html">Calendar</a></li>
-          <li><a class="myUL" href="Files.html">Files</a></li>
-          <li><a class="myUL" href="Reports.html">Reports</a></li>
-                <div id="dropCON" class="conaggainer" onclick="navBTNGroupftn()">
-                    <h1><i class="bi bi-list active"></i></h1>
-                        <div class="payrollNavBTN" id="payrollNavBTNjs"><li><a href="Payroll.html">Payroll</a></li></div>
-                        <div class="recruitmentNavBTN" id="recruitmentNavBTNjs"><li><a href="Recruitment.html">Recruitment</a></li></div>
-                        <div class="performanceNavBTN" id="performanceNavBTNjs"><li><a href="Performance.html">Performance</a></li></div>
-                </div>
-        </ul>
-
+<div class="w3-bar w3-large dropA">
+    <a href="/" class="w3-bar-item w3-button w3-mobile">Dashboard</a>
+    <a href="Organisation.html" class="w3-bar-item w3-button w3-mobile">Organisation</a>
+    <a href="Directory.html" class="w3-bar-item w3-button w3-mobile">Directory</a>
+    <a href="Timesheet.html" class="w3-bar-item w3-button w3-mobile">Timesheet</a>
+    <a href="Calendar.html" class="w3-bar-item w3-button w3-mobile">Calendar</a>
+    <a href="Files.html" class="w3-bar-item w3-button w3-mobile">Files</a>
+    <a href="Reports.html" class="w3-bar-item w3-button w3-mobile">Reports</a>
+    <div class="w3-dropdown-hover w3-mobile">
+      <button class="w3-button active"><i class="fa fa-bars w3-xlarge"></i></button>
+      <div class="w3-dropdown-content w3-bar-block dropA">
+        <a href="Payroll.html" class="w3-bar-item w3-button w3-mobile">Payroll</a>
+        <a href="Recruitment.html" class="w3-bar-item w3-button w3-mobile">Recruitment</a>
+        <a href="Performance.html" class="w3-bar-item w3-button w3-mobile active">Performance</a>
+      </div>
+    </div>
+<a href="#" class="w3-bar-item w3-button w3-mobile w3-right">Logout</a>
+  </div>
 <!-- HTML -->
 <br>
 <br>
