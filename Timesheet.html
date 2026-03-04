@@ -9,7 +9,7 @@
   	<link rel="stylesheet" href="assets/w3.css">
 	<link rel="stylesheet" href="assets/Stylesheet.css">
 	<link rel="stylesheet" href="assets/fontawesome-free-6.7.2-web/css/all.min.css">
-	<script defer src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyr">
+	<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
 	<script defer src="assets/Script.js"></script>
 		<title>Timesheet</title> 
 	<style>
@@ -630,13 +630,12 @@ function myTimesheetImpD5(xml) {
   }
   document.getElementById("day5").innerHTML = table;
 }	
-
-</script>
 // Hide Weekly Table 
 $(document).ready(function(){
   $("#hide").click(function(){
     $("p").remove();
   });
 });
+</script>
   </body>
 </html>
